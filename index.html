@@ -10,29 +10,33 @@
   <body>
     <main>
       <section class="search-box">
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search by city name" />
         <button><img src="/images/search-icon.svg" alt="Search icon" /></button>
       </section>
       <hr />
       <section class="weather-card">
         <header>
-          <h1>Weather in Tokyo</h1>
-          <p class="country-name">Japan</p>
+          <h1>Tokyo</h1>
+          <p class="country-name">, Japan</p>
         </header>
         <div class="main-info">
-          <img src="/images/sun-icon.svg" id="sun-icon" />
-          <p>37&deg;C</p>
-          <p>Min:</p>
-          <p>Max:</p>
+          <div class="curr-status">
+            <img src="/images/sun-icon.svg" id="sun-icon" />
+            <p id="temp">37&deg;C</p>
+          </div>
+          <div class="min-max">
+            <p id="min-temp">Min:</p>
+            <p id="max-temp">Max:</p>
+          </div>
         </div>
         <div class="statistics">
           <ul>
-            <li>Humidity: 47%</li>
-            <li>Wind: 6 km/h</li>
+            <li id="humidity">Humidity: 47%</li>
+            <li id="wind">Wind: 6 km/h</li>
           </ul>
         </div>
       </section>
     </main>
   </body>
-  <script src="script.js" type="module"></script>
+  <script src="script.js"></script>
 </html>

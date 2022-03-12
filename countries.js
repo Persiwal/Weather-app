@@ -1,4 +1,4 @@
-export let countriesStorage = {
+export let countries = {
   AF: "Afghanistan",
   AX: "Aland Islands",
   AL: "Albania",
@@ -114,7 +114,8 @@ export let countriesStorage = {
   KZ: "Kazakhstan",
   KE: "Kenya",
   KI: "Kiribati",
-  KR: "Korea",
+  KR: "South Korea",
+  KP: "North Korea",
   KW: "Kuwait",
   KG: "Kyrgyzstan",
   LA: "Lao People's Democratic Republic",

@@ -15,14 +15,15 @@ header {
   align-items: flex-start;
   gap: 5px;
   .country-name {
-    font-size: 1rem;
+    padding-top: 10px;
+    font-size: 2rem;
     margin: 0;
   }
 }
 
 main {
   background-color: rgba(0, 0, 0, 0.6);
-  width: 600px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -64,18 +65,34 @@ hr {
   }
 }
 
+.min-max {
+  display: flex;
+  gap: 30px;
+}
+
+#min-temp,
+#max-temp {
+  font-size: 1.5rem;
+}
+
 img {
   width: 24px;
   height: 24px;
 }
 
 #sun-icon {
-  transform: scale(2);
+  transform: scale(3);
 }
 
 h1 {
   font-size: 3rem;
   margin: 0px 0px 10px 0px;
+}
+.curr-status {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 3rem;
 }
 
 .main-info {
@@ -83,7 +100,7 @@ h1 {
   display: flex;
   align-items: center;
   font-size: 2rem;
-  gap: 30px;
+  gap: 60px;
   max-height: 100px;
 }
 
