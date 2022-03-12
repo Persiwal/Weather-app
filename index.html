@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main></main>
+    <main>
+      <section class="search-box">
+        <input type="text" placeholder="Search" />
+        <button><img src="/images/search-icon.svg" alt="Search icon" /></button>
+      </section>
+      <hr />
+      <section class="weather-card">
+        <h1>Weather in Tokyo</h1>
+        <div class="main-info">
+          <img src="/images/sun-icon.svg" id="sun-icon" />
+          <p>37&deg;C</p>
+        </div>
+        <div class="statistics">
+          <ul>
+            <li>Humidity: 47%</li>
+            <li>Wind: 6 km/h</li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>
