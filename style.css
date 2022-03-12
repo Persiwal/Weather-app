@@ -9,6 +9,17 @@ body {
   color: white;
 }
 
+header {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+header .country-name {
+  font-size: 1rem;
+  margin: 0;
+}
+
 main {
   background-color: rgba(0, 0, 0, 0.6);
   width: 600px;
