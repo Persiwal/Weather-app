@@ -246,3 +246,18 @@ export let countries = {
   ZM: "Zambia",
   ZW: "Zimbabwe",
 };
+
+export let weatherIcons = {
+  "clear sky": "/images/clear-sky-icon.png",
+  "broken clouds": "/images/broken-clouds-icon.png",
+  "overcast clouds": "/images/overcast-clouds-icon.png",
+  "few clouds": "/images/few-clouds-icon-png",
+  "scattered clouds": "/images/broken-clouds-icon.png",
+  "shower rain": "/images/rain-icon.png",
+  "light rain": "/images/rain-icon.png",
+  rain: "/images/rain-icon.png",
+  thunderstorm: "/images/thunderstorm-icon.png",
+  snow: "/images/snow-icon.png",
+  mist: "/images/mist-icon.png",
+  "light snow": "/images/snow-icon.png",
+};
