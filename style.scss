@@ -23,10 +23,10 @@ header {
 
 main {
   background-color: rgba(0, 0, 0, 0.6);
-  width: 700px;
+  width: 660px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
@@ -70,17 +70,12 @@ hr {
   gap: 30px;
 }
 
-#min-temp,
-#max-temp {
-  font-size: 1.5rem;
-}
-
 img {
   width: 24px;
   height: 24px;
 }
 
-#sun-icon {
+#weather-icon {
   transform: scale(3);
 }
 

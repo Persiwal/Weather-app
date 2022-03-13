@@ -10,8 +10,14 @@
   <body>
     <main>
       <section class="search-box">
-        <input type="text" placeholder="Search by city name" />
-        <button><img src="/images/search-icon.svg" alt="Search icon" /></button>
+        <input
+          class="city-input"
+          type="text"
+          placeholder="Search by city name"
+        />
+        <button class="search-button">
+          <img src="/images/search-icon.svg" alt="Search icon" />
+        </button>
       </section>
       <hr />
       <section class="weather-card">
@@ -21,16 +27,18 @@
         </header>
         <div class="main-info">
           <div class="curr-status">
-            <img src="/images/sun-icon.svg" id="sun-icon" />
+            <img src="/images/sun-icon.svg" id="weather-icon" />
             <p id="temp">37&deg;C</p>
           </div>
-          <div class="min-max">
+          <!-- <div class="min-max">
             <p id="min-temp">Min:</p>
             <p id="max-temp">Max:</p>
-          </div>
+          </div> -->
         </div>
         <div class="statistics">
           <ul>
+            <li id="min-temp">Min:</li>
+            <li id="max-temp">Max:</li>
             <li id="humidity">Humidity: 47%</li>
             <li id="wind">Wind: 6 km/h</li>
           </ul>

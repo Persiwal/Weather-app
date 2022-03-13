@@ -1,5 +1,18 @@
 // import { countries } from "./countries.js";
 
+// variables start
+let searchButton = document.querySelector(".search-button");
+let input = document.querySelector(".city-input");
+let heading = document.querySelector("h1");
+let countryName = document.querySelector(".country-name");
+let temperature = document.querySelector("#temp");
+let minTemp = document.querySelector("#min-temp");
+let maxTemp = document.querySelector("#max-temp");
+let hum = document.querySelector("#humidity");
+let wind = document.querySelector("#wind");
+let weatherIcon = document.querySelector("#weather-icon");
+// variables end
+
 let weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
   fetchWeather: function (city) {
@@ -29,28 +42,40 @@ let weather = {
       description
     );
 
-    let heading = document.querySelector("h1");
     heading.innerText = `${name}`;
-
-    let countryName = document.querySelector(".country-name");
     countryName.innerText = `,   ${countries[country]}`;
 
-    let temperature = document.querySelector("#temp");
     temperature.innerText = `${temp}\xB0C`;
 
-    let minTemp = document.querySelector("#min-temp");
     minTemp.innerText = `Min: ${temp_min}\xB0C`;
 
-    let maxTemp = document.querySelector("#max-temp");
     maxTemp.innerText = `Max: ${temp_max}\xB0C`;
 
-    let hum = document.querySelector("#humidity");
     hum.innerText = `Humidity: ${humidity}%`;
 
-    let wind = document.querySelector("#wind");
     wind.innerText = `Wind: ${speed}km/h`;
+
+    weatherIcon.src = weatherIcons[description];
+  },
+  searchWeather: function () {
+    this.fetchWeather(input.value);
   },
 };
+
+//display this weather on first page load
+weather.fetchWeather("Warsaw");
+
+// search by clicking button
+searchButton.addEventListener("click", function () {
+  weather.searchWeather();
+});
+
+// search by enter key
+input.addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+    weather.searchWeather();
+  }
+});
 
 let countries = {
   AF: "Afghanistan",
@@ -299,4 +324,19 @@ let countries = {
   YE: "Yemen",
   ZM: "Zambia",
   ZW: "Zimbabwe",
+};
+
+let weatherIcons = {
+  "clear sky": "/images/clear-sky-icon.png",
+  "broken clouds": "/images/broken-clouds-icon.png",
+  "overcast clouds": "/images/overcast-clouds-icon.png",
+  "few clouds": "/images/few-clouds-icon-png",
+  "scattered clouds": "/images/broken-clouds-icon.png",
+  "shower rain": "/images/rain-icon.png",
+  "light rain": "/images/rain-icon.png",
+  rain: "/images/rain-icon.png",
+  thunderstorm: "/images/thunderstorm-icon.png",
+  snow: "/images/snow-icon.png",
+  mist: "/images/mist-icon.png",
+  "light snow": "/images/snow-icon.png",
 };
