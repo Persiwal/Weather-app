@@ -2,6 +2,7 @@
 
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
+  // background-size: 1920px 1080px;
   display: flex;
   justify-content: center;
   min-height: 60vh;
@@ -22,7 +23,7 @@ header {
 }
 
 main {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 660px;
   display: flex;
   flex-direction: column;

@@ -258,6 +258,7 @@ export let weatherIcons = {
   rain: "/images/rain-icon.png",
   thunderstorm: "/images/thunderstorm-icon.png",
   snow: "/images/snow-icon.png",
-  mist: "/images/mist-icon.png",
+  fog: "/images/fog-icon.png",
   "light snow": "/images/snow-icon.png",
+  "light intensity shower rain": "/images/rain-icon.png",
 };
