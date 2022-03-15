@@ -21,7 +21,7 @@ export const weather = {
     )
       .then((response) => {
         if (response.status == 404) {
-          throw Error(response.statusText);
+          alert("Can't find city name in database");
         } else {
           return response.json();
         }
@@ -37,16 +37,6 @@ export const weather = {
     const { humidity, temp, temp_min, temp_max } = data.main;
     const { country } = data.sys;
     const { description } = data.weather[0];
-    console.log(
-      name,
-      speed,
-      humidity,
-      temp,
-      temp_min,
-      temp_max,
-      country,
-      description
-    );
 
     heading.innerText = `${name}`;
     countryName.innerText = `,   ${countries[country]}`;

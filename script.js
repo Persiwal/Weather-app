@@ -13,13 +13,15 @@ searchButton.addEventListener("click", function () {
   if (input.value) {
     weather.searchWeather();
     unsplash.fetchPhoto();
+    input.value = "";
   }
 });
 
 // search by enter key
 input.addEventListener("keyup", function (event) {
-  if (event.key == "Enter" && input.value) {
+  if (event.key === "Enter" && input.value) {
     weather.searchWeather();
     unsplash.fetchPhoto();
+    input.value = "";
   }
 });
