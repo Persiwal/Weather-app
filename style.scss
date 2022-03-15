@@ -14,9 +14,9 @@ body {
 header {
   display: flex;
   align-items: flex-start;
-  gap: 5px;
+  gap: 0.31rem;
   .country-name {
-    padding-top: 10px;
+    padding-top: 0.625rem;
     font-size: 2rem;
     margin: 0;
   }
@@ -24,19 +24,19 @@ header {
 
 main {
   background-color: rgba(0, 0, 0, 0.8);
-  width: 660px;
+  width: 41.25rem;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 20px 40px;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.8);
 }
 
 hr {
   width: 100%;
-  border: 1px solid grey;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  border: 0.06rem solid grey;
+  margin-top: 1.87rem;
+  margin-bottom: 1.87rem;
   opacity: 60%;
 }
 
@@ -44,12 +44,12 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 
   input {
-    width: 400px;
-    padding: 13px;
-    border-radius: 20px;
+    width: 25rem;
+    padding: 0.81rem;
+    border-radius: 1.25rem;
     outline: none;
     color: white;
     border-color: rgba(0, 0, 0, 0.5);
@@ -63,19 +63,20 @@ hr {
   button {
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 3.12rem;
+    height: 3.12rem;
+    border: 0.06rem solid rgba(128, 128, 128, 0.5);
   }
 }
 
 .min-max {
   display: flex;
-  gap: 30px;
+  gap: 1.87rem;
 }
 
 img {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #weather-icon {
@@ -84,26 +85,26 @@ img {
 
 h1 {
   font-size: 3rem;
-  margin: 0px 0px 10px 0px;
+  margin: 0 0 0.625rem 0;
 }
 .curr-status {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1.87rem;
   font-size: 3rem;
 }
 
 .main-info {
-  padding-left: 40px;
+  padding-left: 2.5rem;
   display: flex;
   align-items: center;
   font-size: 2rem;
-  gap: 60px;
-  max-height: 100px;
+  gap: 3.75rem;
+  max-height: 6.25rem;
 }
 
 ul {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 3.125rem;
 }

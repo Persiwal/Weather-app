@@ -1,6 +1,6 @@
 import { countries, weatherIcons } from "./helpers.js";
 import { unsplash } from "./unsplash-config.js";
-console.log(Math.floor(Math.random() * 10));
+
 // variables start
 let searchButton = document.querySelector(".search-button");
 let input = document.querySelector(".city-input");
@@ -13,6 +13,7 @@ let hum = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
 let weatherIcon = document.querySelector("#weather-icon");
 // variables end
+
 let weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
   fetchWeather: function (city) {
@@ -61,23 +62,21 @@ let weather = {
     this.fetchWeather(input.value);
   },
 };
-console.log(input.value);
 
 //display this weather on first page load
 weather.fetchWeather("Warsaw");
-unsplash.fetchPhoto("Warsaw");
+unsplash.fetchPhoto();
 
 // search by clicking button
 searchButton.addEventListener("click", function () {
   weather.searchWeather();
-  console.log(input.value);
-  unsplash.fetchPhoto(input.value);
+  unsplash.fetchPhoto();
 });
 
 // search by enter key
 input.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     weather.searchWeather();
-    unsplash.fetchPhoto(input.value);
+    unsplash.fetchPhoto();
   }
 });
