@@ -3,10 +3,10 @@ export const unsplash = {
 
   fetchPhoto: (keyword) => {
     fetch(
-      `https://api.unsplash.com/photos/random/?color=white&q=0&query=city&orientation=landscape&client_id=${this.clientID}`
+      `https://api.unsplash.com/photos/random/?color=white&q=0&query=city&orientation=landscape&client_id=${unsplash.clientID}`
     )
       .then((response) => response.json())
-      .then((data) => this.setPhotoAsBg(data));
+      .then((data) => unsplash.setPhotoAsBg(data));
   },
   setPhotoAsBg: (data) => {
     const { links } = data;

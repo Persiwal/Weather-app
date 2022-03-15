@@ -14,10 +14,7 @@ export const weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
   fetchWeather: (city) => {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
-        city +
-        "&units=metric&appid=" +
-        this.apiKey
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weather.apiKey}`
     )
       .then((response) => {
         if (response.status == 404) {
@@ -26,7 +23,7 @@ export const weather = {
           return response.json();
         }
       })
-      .then((data) => this.displayWeather(data))
+      .then((data) => weather.displayWeather(data))
       .catch((error) => {
         console.error(error);
       });
@@ -54,6 +51,6 @@ export const weather = {
     weatherIcon.src = weatherIcons[description];
   },
   searchWeather: () => {
-    this.fetchWeather(input.value);
+    weather.fetchWeather(input.value);
   },
 };
