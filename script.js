@@ -9,7 +9,7 @@ weather.fetchWeather("Warsaw");
 unsplash.fetchPhoto();
 
 // search by clicking button
-searchButton.addEventListener("click", function () {
+searchButton.addEventListener("click", () => {
   if (input.value) {
     weather.searchWeather();
     unsplash.fetchPhoto();
@@ -18,7 +18,7 @@ searchButton.addEventListener("click", function () {
 });
 
 // search by enter key
-input.addEventListener("keyup", function (event) {
+input.addEventListener("keyup", (event) => {
   if (event.key === "Enter" && input.value) {
     weather.searchWeather();
     unsplash.fetchPhoto();

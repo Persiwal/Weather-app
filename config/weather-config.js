@@ -12,7 +12,7 @@ const weatherIcon = document.querySelector("#weather-icon");
 
 export const weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
-  fetchWeather: function (city) {
+  fetchWeather: (city) => {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
@@ -31,7 +31,7 @@ export const weather = {
         console.error(error);
       });
   },
-  displayWeather: function (data) {
+  displayWeather: (data) => {
     const { name } = data;
     const { speed } = data.wind;
     const { humidity, temp, temp_min, temp_max } = data.main;
@@ -53,7 +53,7 @@ export const weather = {
 
     weatherIcon.src = weatherIcons[description];
   },
-  searchWeather: function () {
+  searchWeather: () => {
     this.fetchWeather(input.value);
   },
 };
