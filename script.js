@@ -1,5 +1,5 @@
-import { unsplash } from "./unsplash-config.js";
-import { weather } from "./weather-config.js";
+import { unsplash } from "./config/unsplash-config.js";
+import { weather } from "./config/weather-config.js";
 
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");

@@ -1,4 +1,4 @@
-import { countries, weatherIcons } from "./helpers.js";
+import { countries, weatherIcons } from "../helpers.js";
 
 const input = document.querySelector(".city-input");
 const heading = document.querySelector("h1");
@@ -28,7 +28,7 @@ export const weather = {
       })
       .then((data) => this.displayWeather(data))
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   },
   displayWeather: function (data) {
