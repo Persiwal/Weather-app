@@ -23,8 +23,17 @@ let weather = {
         "&units=metric&appid=" +
         this.apiKey
     )
-      .then((response) => response.json())
-      .then((data) => this.displayWeather(data));
+      .then((response) => {
+        if (response.status == 404) {
+          throw Error(response.statusText);
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => this.displayWeather(data))
+      .catch((error) => {
+        console.log(error);
+      });
   },
   displayWeather: function (data) {
     const { name } = data;
@@ -69,13 +78,15 @@ unsplash.fetchPhoto();
 
 // search by clicking button
 searchButton.addEventListener("click", function () {
-  weather.searchWeather();
-  unsplash.fetchPhoto();
+  if (input.value) {
+    weather.searchWeather();
+    unsplash.fetchPhoto();
+  }
 });
 
 // search by enter key
 input.addEventListener("keyup", function (event) {
-  if (event.key == "Enter") {
+  if (event.key == "Enter" && input.value) {
     weather.searchWeather();
     unsplash.fetchPhoto();
   }

@@ -66,6 +66,9 @@ hr {
     width: 3.12rem;
     height: 3.12rem;
     border: 0.06rem solid rgba(128, 128, 128, 0.5);
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.8);
+    }
   }
 }
 
@@ -104,7 +107,13 @@ h1 {
 }
 
 ul {
+  margin-top: 0;
   list-style: none;
   display: flex;
   gap: 3.125rem;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
 }

@@ -10,7 +10,6 @@ export let unsplash = {
   },
   setPhotoAsBg: function (data) {
     const { links } = data;
-    console.log(links);
     document.body.style.backgroundImage = `url(${links["download"]})`;
   },
 };
