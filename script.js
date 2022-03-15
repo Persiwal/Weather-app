@@ -1,16 +1,16 @@
 import { countries, weatherIcons } from "./helpers.js";
 import { unsplash } from "./unsplash-config.js";
 
-let searchButton = document.querySelector(".search-button");
-let input = document.querySelector(".city-input");
-let heading = document.querySelector("h1");
-let countryName = document.querySelector(".country-name");
-let temperature = document.querySelector("#temp");
-let minTemp = document.querySelector("#min-temp");
-let maxTemp = document.querySelector("#max-temp");
-let hum = document.querySelector("#humidity");
-let wind = document.querySelector("#wind");
-let weatherIcon = document.querySelector("#weather-icon");
+const searchButton = document.querySelector(".search-button");
+const input = document.querySelector(".city-input");
+const heading = document.querySelector("h1");
+const countryName = document.querySelector(".country-name");
+const temperature = document.querySelector("#temp");
+const minTemp = document.querySelector("#min-temp");
+const maxTemp = document.querySelector("#max-temp");
+const hum = document.querySelector("#humidity");
+const wind = document.querySelector("#wind");
+const weatherIcon = document.querySelector("#weather-icon");
 
 let weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
