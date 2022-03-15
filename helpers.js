@@ -1,4 +1,4 @@
-export let countries = {
+export const countries = {
   AF: "Afghanistan",
   AX: "Aland Islands",
   AL: "Albania",
@@ -247,7 +247,7 @@ export let countries = {
   ZW: "Zimbabwe",
 };
 
-export let weatherIcons = {
+export const weatherIcons = {
   "clear sky": "/images/clear-sky-icon.png",
   "broken clouds": "/images/broken-clouds-icon.png",
   "overcast clouds": "/images/overcast-clouds-icon.png",
