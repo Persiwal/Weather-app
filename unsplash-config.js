@@ -3,15 +3,14 @@ export let unsplash = {
 
   fetchPhoto: function (keyword) {
     fetch(
-      `https://api.unsplash.com/search/photos?page=1&query=${keyword}&orientation=landscape&client_id=${this.clientID}`
+      `https://api.unsplash.com/photos/random/?color=white&query=city&orientation=landscape&client_id=${this.clientID}`
     )
       .then((response) => response.json())
       .then((data) => this.setPhotoAsBg(data));
   },
   setPhotoAsBg: function (data) {
-    const { results } = data;
-    //  console.log(results);
-    console.log(results);
-    document.body.style.backgroundImage = `url(${results[0].urls["regular"]})`;
+    const { links } = data;
+    console.log(links);
+    document.body.style.backgroundImage = `url(${links["download"]})`;
   },
 };

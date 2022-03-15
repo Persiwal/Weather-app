@@ -251,7 +251,7 @@ export let weatherIcons = {
   "clear sky": "/images/clear-sky-icon.png",
   "broken clouds": "/images/broken-clouds-icon.png",
   "overcast clouds": "/images/overcast-clouds-icon.png",
-  "few clouds": "/images/few-clouds-icon-png",
+  "few clouds": "/images/few-clouds-icon.png",
   "scattered clouds": "/images/broken-clouds-icon.png",
   "shower rain": "/images/rain-icon.png",
   "light rain": "/images/rain-icon.png",
