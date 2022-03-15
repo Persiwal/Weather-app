@@ -1,7 +1,6 @@
 import { countries, weatherIcons } from "./helpers.js";
 import { unsplash } from "./unsplash-config.js";
 
-// variables start
 let searchButton = document.querySelector(".search-button");
 let input = document.querySelector(".city-input");
 let heading = document.querySelector("h1");
@@ -12,7 +11,6 @@ let maxTemp = document.querySelector("#max-temp");
 let hum = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
 let weatherIcon = document.querySelector("#weather-icon");
-// variables end
 
 let weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
