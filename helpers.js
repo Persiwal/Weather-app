@@ -262,4 +262,5 @@ export const weatherIcons = {
   mist: "/images/fog-icon.png",
   "light snow": "/images/snow-icon.png",
   "light intensity shower rain": "/images/rain-icon.png",
+  "moderate rain": "/images/rain-icon.png",
 };

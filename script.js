@@ -5,14 +5,14 @@ const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
 
 //display this weather on first page load
-weather.fetchWeather("Warsaw");
 unsplash.fetchPhoto();
+weather.fetchWeather("Warsaw");
 
 // search by clicking button
 searchButton.addEventListener("click", () => {
   if (input.value) {
-    weather.searchWeather();
     unsplash.fetchPhoto();
+    weather.searchWeather();
     input.value = "";
   }
 });
@@ -20,8 +20,8 @@ searchButton.addEventListener("click", () => {
 // search by enter key
 input.addEventListener("keyup", (event) => {
   if (event.key === "Enter" && input.value) {
-    weather.searchWeather();
     unsplash.fetchPhoto();
+    weather.searchWeather();
     input.value = "";
   }
 });

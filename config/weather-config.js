@@ -17,7 +17,7 @@ export const weather = {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weather.apiKey}`
     )
       .then((response) => {
-        if (response.status == 404) {
+        if (response.status === 404) {
           alert("Can't find city name in database");
         } else {
           return response.json();
@@ -29,26 +29,34 @@ export const weather = {
       });
   },
   displayWeather: (data) => {
-    const { name } = data;
-    const { speed } = data.wind;
-    const { humidity, temp, temp_min, temp_max } = data.main;
-    const { country } = data.sys;
-    const { description } = data.weather[0];
+    const {
+      name,
+      wind: { speed },
+      main: { humidity, temp, temp_min, temp_max },
+      sys: { country },
+      weather: {
+        [0]: { description },
+      },
+    } = data;
 
-    heading.innerText = `${name}`;
-    countryName.innerText = `,   ${countries[country]}`;
+    heading.innerText = `${name},`;
+    countryName.innerText = `${countries[country]}`;
 
-    temperature.innerText = `${temp}\xB0C`;
+    if (window.innerWidth < 415) {
+      temperature.innerText = `${parseInt(temp)}\xB0C`;
+    } else {
+      temperature.innerText = `${temp}\xB0C`;
+    }
 
     minTemp.innerText = `Min: ${temp_min}\xB0C`;
 
     maxTemp.innerText = `Max: ${temp_max}\xB0C`;
 
     hum.innerText = `Humidity: ${humidity}%`;
-
     wind.innerText = `Wind: ${speed}km/h`;
 
     weatherIcon.src = weatherIcons[description];
+    console.log(description);
   },
   searchWeather: () => {
     weather.fetchWeather(input.value);

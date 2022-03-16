@@ -1,7 +1,7 @@
 export const unsplash = {
   clientID: "lIhop-7RCk1OmyEl2IMpNDUkhBT5xJG2y9r5NpnR2Ks",
 
-  fetchPhoto: (keyword) => {
+  fetchPhoto: () => {
     fetch(
       `https://api.unsplash.com/photos/random/?color=white&q=0&query=city&orientation=landscape&client_id=${unsplash.clientID}`
     )
