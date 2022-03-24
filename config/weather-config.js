@@ -12,22 +12,30 @@ const weatherIcon = document.querySelector("#weather-icon");
 
 export const weather = {
   apiKey: "4741d22028b090101d3735b88548e200",
-  fetchWeather: (city) => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weather.apiKey}`
-    )
-      .then((response) => {
-        if (response.status === 404) {
-          alert("Can't find city name in database");
-        } else {
-          return response.json();
-        }
-      })
-      .then((data) => weather.displayWeather(data))
-      .catch((error) => {
-        console.error(error);
-      });
-  },
+  fetchWeather: async (city) => {
+    try {
+      const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weather.apiKey}`)
+      if(response.status===404) {
+        return alert("Can't find city name in database");
+      } else {
+        const data = await response.json();
+      return weather.displayWeather(data);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+},
+      // .then((response) => {
+      //   if (response.status === 404) {
+      //     alert("Can't find city name in database");
+      //   } else {
+      //     return response.json();
+      //   }
+      // })
+      // .then((data) => weather.displayWeather(data))
+      // .catch((error) => {
+      //   console.error(error);
+      // });
   displayWeather: (data) => {
     const {
       name,
