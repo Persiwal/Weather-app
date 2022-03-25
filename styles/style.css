@@ -2,17 +2,27 @@
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
   background-size: 1920px 1080px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 60vh;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Open Sans", sans-serif;
   color: white;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 0.31rem;
 }
 
@@ -25,11 +35,17 @@ header .country-name {
 main {
   background-color: rgba(0, 0, 0, 0.8);
   width: 41.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
 }
 
 hr {
@@ -41,10 +57,62 @@ hr {
 }
 
 .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5rem;
+}
+
+.search-box .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box ul.suggestions {
+  position: absolute;
+  top: 15%;
+  background-color: #250505;
+  opacity: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 1px;
+  width: 25rem;
+  padding: 0.81rem;
+}
+
+.search-box ul.suggestions li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid black;
+  width: 40%;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.search-box ul.suggestions li:hover {
+  background-color: rgba(120, 84, 136, 0.432);
 }
 
 .search-box input {
@@ -57,6 +125,18 @@ hr {
   background-color: rgba(128, 128, 128, 0.5);
   opacity: 60%;
   font-size: 1.5rem;
+}
+
+.search-box input::-webkit-input-placeholder {
+  color: white;
+}
+
+.search-box input:-ms-input-placeholder {
+  color: white;
+}
+
+.search-box input::-ms-input-placeholder {
+  color: white;
 }
 
 .search-box input::placeholder {
@@ -81,7 +161,8 @@ img {
 }
 
 #weather-icon {
-  transform: scale(3);
+  -webkit-transform: scale(3);
+          transform: scale(3);
 }
 
 h1 {
@@ -90,16 +171,24 @@ h1 {
 }
 
 .curr-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.87rem;
   font-size: 3rem;
 }
 
 .main-info {
   padding-left: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2rem;
   gap: 3.75rem;
   max-height: 6.25rem;
@@ -108,13 +197,19 @@ h1 {
 ul {
   margin-top: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 3.125rem;
 }
 
 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.2rem;
 }
 
@@ -124,7 +219,10 @@ ul li {
     margin: 0;
   }
   ul.stat-list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0;
     font-size: 1.5rem;
     margin-top: 2rem;
@@ -135,9 +233,16 @@ ul li {
   }
   header {
     padding: 0;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 0;
   }
   header h1 {
@@ -159,8 +264,13 @@ ul li {
     padding: 0;
   }
   .curr-status {
-    justify-content: center;
-    flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     padding: 0;
     gap: 80px;
   }
@@ -176,3 +286,4 @@ ul li {
     margin-top: 2rem;
   }
 }
+/*# sourceMappingURL=style.css.map */

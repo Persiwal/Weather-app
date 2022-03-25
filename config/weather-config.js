@@ -25,17 +25,6 @@ export const weather = {
     console.error(err);
   }
 },
-      // .then((response) => {
-      //   if (response.status === 404) {
-      //     alert("Can't find city name in database");
-      //   } else {
-      //     return response.json();
-      //   }
-      // })
-      // .then((data) => weather.displayWeather(data))
-      // .catch((error) => {
-      //   console.error(error);
-      // });
   displayWeather: (data) => {
     const {
       name,
@@ -66,7 +55,7 @@ export const weather = {
     weatherIcon.src = weatherIcons[description];
     console.log(description);
   },
-  searchWeather: () => {
-    weather.fetchWeather(input.value);
+  searchWeather: (value) => {
+    weather.fetchWeather(value);
   },
 };
