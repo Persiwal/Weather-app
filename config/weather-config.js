@@ -2,7 +2,7 @@ import { countries, weatherIcons } from "../helpers.js";
 
 const input = document.querySelector(".city-input");
 const heading = document.querySelector("h1");
-const countryName = document.querySelector(".country-name");
+const countryName = document.querySelector(".country-name-header");
 const temperature = document.querySelector("#temp");
 const minTemp = document.querySelector("#min-temp");
 const maxTemp = document.querySelector("#max-temp");
@@ -35,7 +35,7 @@ export const weather = {
         [0]: { description },
       },
     } = data;
-
+    console.log(countries[country]);
     heading.innerText = `${name},`;
     countryName.innerText = `${countries[country]}`;
 

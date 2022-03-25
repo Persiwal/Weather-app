@@ -26,7 +26,7 @@ header {
   gap: 0.31rem;
 }
 
-header .country-name {
+header .country-name-header {
   padding-top: 0.625rem;
   font-size: 2rem;
   margin: 0;
@@ -68,7 +68,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 5rem;
+  padding-left: 3rem;
 }
 
 .search-box .search {
@@ -85,15 +85,15 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 1px;
-  width: 25rem;
+  width: 30rem;
   padding: 0.81rem;
 }
 
@@ -116,7 +116,7 @@ hr {
 }
 
 .search-box input {
-  width: 25rem;
+  width: 30rem;
   padding: 0.81rem;
   border-radius: 1.25rem;
   outline: none;
@@ -248,7 +248,7 @@ ul li {
   header h1 {
     margin: 0;
   }
-  header p.country-name {
+  header p.country-name-header {
     margin: 0;
     padding-top: 0px;
     padding-left: 7rem;

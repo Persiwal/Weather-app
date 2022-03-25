@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 0.31rem;
-  .country-name {
+  .country-name-header {
     padding-top: 0.625rem;
     font-size: 2rem;
     margin: 0;
@@ -45,7 +45,7 @@ hr {
   justify-content: center;
   gap: 0;
   flex-direction: column;
-  padding-left:5rem;
+  padding-left:3rem;
 
 .search {
   display:flex;
@@ -57,12 +57,12 @@ ul.suggestions {
   background-color: rgb(37, 5, 5);
   opacity:100%;
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap:wrap;
   padding:0;
   margin:0;
   gap:1px;
-  width:25rem;
+  width:30rem;
   padding: 0.81rem;
   li {
     display:flex;
@@ -79,7 +79,7 @@ ul.suggestions {
 }
 
   input {
-    width: 25rem;
+    width: 30rem;
     padding: 0.81rem;
     border-radius: 1.25rem;
     outline: none;
@@ -170,7 +170,7 @@ ul {
     h1 {
       margin: 0;
     }
-    p.country-name {
+    p.country-name-header {
       margin: 0;
       padding-top: 0px;
       padding-left: 7rem;
