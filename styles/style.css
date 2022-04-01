@@ -64,11 +64,9 @@ hr {
   padding: 0.81rem;
 }
 .search-box ul.suggestions li {
-  display: flex;
   justify-content: center;
   margin-bottom: 0.25rem;
   border-bottom: 1px solid black;
-  width: 40%;
   font-size: 0.8rem;
   cursor: pointer;
 }
