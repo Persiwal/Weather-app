@@ -2,6 +2,7 @@ import { unsplash } from "./config/unsplash-config.js";
 import { weather } from "./config/weather-config.js";
 import { cities } from "./config/cities-config.js";
 
+const suggestionBox = document.querySelector("ul.suggestions")
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
 
@@ -48,7 +49,6 @@ input.addEventListener('keydown', () => {
     // search by suggestion
  } else {
    let suggestions=document.querySelectorAll(".suggestions li")
-   console.log(suggestions);
    suggestions.innerHTML='';
  }
 

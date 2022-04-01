@@ -2,30 +2,19 @@
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
   background-size: 1920px 1080px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-height: 60vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   color: white;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   gap: 0.31rem;
 }
-
 header .country-name-header {
   padding-top: 0.625rem;
   font-size: 2rem;
@@ -35,17 +24,11 @@ header .country-name-header {
 main {
   background-color: rgba(0, 0, 0, 0.8);
   width: 41.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
-          box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
 }
 
 hr {
@@ -57,64 +40,44 @@ hr {
 }
 
 .search-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 3rem;
 }
-
 .search-box .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .search-box ul.suggestions {
+  display: none;
   position: absolute;
   top: 15%;
-  background-color: #250505;
+  background-color: rgb(37, 5, 5);
   opacity: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 1px;
   width: 30rem;
   padding: 0.81rem;
 }
-
-.search-box ul.suggestions li {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.search-box ul.suggestions ul.suggestions.active {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+.search-box ul.suggestions li {
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.25rem;
   border-bottom: 1px solid black;
   width: 40%;
   font-size: 0.8rem;
   cursor: pointer;
 }
-
 .search-box ul.suggestions li:hover {
   background-color: rgba(120, 84, 136, 0.432);
 }
-
 .search-box input {
   width: 30rem;
   padding: 0.81rem;
@@ -126,23 +89,15 @@ hr {
   opacity: 60%;
   font-size: 1.5rem;
 }
-
-.search-box input::-webkit-input-placeholder {
+.search-box input::-moz-placeholder {
   color: white;
 }
-
 .search-box input:-ms-input-placeholder {
   color: white;
 }
-
-.search-box input::-ms-input-placeholder {
-  color: white;
-}
-
 .search-box input::placeholder {
   color: white;
 }
-
 .search-box button {
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 50%;
@@ -150,7 +105,6 @@ hr {
   height: 3.12rem;
   border: 0.06rem solid rgba(128, 128, 128, 0.5);
 }
-
 .search-box button:hover {
   background-color: rgba(128, 128, 128, 0.8);
 }
@@ -161,8 +115,7 @@ img {
 }
 
 #weather-icon {
-  -webkit-transform: scale(3);
-          transform: scale(3);
+  transform: scale(3);
 }
 
 h1 {
@@ -171,24 +124,16 @@ h1 {
 }
 
 .curr-status {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 1.87rem;
   font-size: 3rem;
 }
 
 .main-info {
   padding-left: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 2rem;
   gap: 3.75rem;
   max-height: 6.25rem;
@@ -197,19 +142,12 @@ h1 {
 ul {
   margin-top: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 3.125rem;
 }
-
 ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 0.2rem;
 }
 
@@ -218,11 +156,9 @@ ul li {
     padding: 0;
     margin: 0;
   }
+
   ul.stat-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 0;
     font-size: 1.5rem;
     margin-top: 2rem;
@@ -231,18 +167,12 @@ ul li {
     gap: 0.1rem;
     margin: 0;
   }
+
   header {
     padding: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 0;
   }
   header h1 {
@@ -253,37 +183,37 @@ ul li {
     padding-top: 0px;
     padding-left: 7rem;
   }
+
   main {
     width: 100%;
     min-height: 100vh;
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   }
+
   .main-info {
     display: block;
     min-height: 10rem;
     padding: 0;
   }
+
   .curr-status {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    justify-content: center;
+    flex-direction: row-reverse;
     padding: 0;
     gap: 80px;
   }
+
   #weather-icon {
     width: 64px;
     height: 64px;
   }
+
   input.city-input {
     width: 18rem;
   }
+
   #temp {
     font-size: 5rem;
     margin-top: 2rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

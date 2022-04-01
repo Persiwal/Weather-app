@@ -35,7 +35,6 @@ export const weather = {
         [0]: { description },
       },
     } = data;
-    console.log(countries[country]);
     heading.innerText = `${name},`;
     countryName.innerText = `${countries[country]}`;
 
@@ -53,7 +52,6 @@ export const weather = {
     wind.innerText = `Wind: ${speed}km/h`;
 
     weatherIcon.src = weatherIcons[description];
-    console.log(description);
   },
   searchWeather: (value) => {
     weather.fetchWeather(value);
