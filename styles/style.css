@@ -52,7 +52,7 @@ hr {
 .search-box ul.suggestions {
   display: none;
   position: absolute;
-  top: 15%;
+  top: 16%;
   background-color: rgb(37, 5, 5);
   opacity: 100%;
   justify-content: space-between;
@@ -62,9 +62,6 @@ hr {
   gap: 1px;
   width: 30rem;
   padding: 0.81rem;
-}
-.search-box ul.suggestions ul.suggestions.active {
-  display: flex;
 }
 .search-box ul.suggestions li {
   display: flex;
@@ -77,6 +74,9 @@ hr {
 }
 .search-box ul.suggestions li:hover {
   background-color: rgba(120, 84, 136, 0.432);
+}
+.search-box ul.suggestions.active {
+  display: flex;
 }
 .search-box input {
   width: 30rem;

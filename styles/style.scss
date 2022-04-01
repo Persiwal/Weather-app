@@ -54,7 +54,7 @@ hr {
 ul.suggestions {
   display:none;
   position:absolute;
-  top:15%;
+  top:16%;
   background-color: rgb(37, 5, 5);
   opacity:100%;
   //display:flex;
@@ -65,9 +65,6 @@ ul.suggestions {
   gap:1px;
   width:30rem;
   padding: 0.81rem;
-  ul.suggestions.active {
-    display:flex;
-  }
   li {
     display:flex;
     justify-content: center;
@@ -81,6 +78,9 @@ ul.suggestions {
     }
   }
 }
+ul.suggestions.active {
+    display:flex;
+  }
 
   input {
     width: 30rem;

@@ -2,10 +2,11 @@ import { unsplash } from "./config/unsplash-config.js";
 import { weather } from "./config/weather-config.js";
 import { cities } from "./config/cities-config.js";
 
-const suggestionBox = document.querySelector("ul.suggestions")
+const suggestionBox = document.querySelector("ul.suggestions");
+let suggestions = document.querySelectorAll('.suggestions li')
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
-
+console.log(suggestionBox);
 //display this weather on first page load
   //unsplash.fetchPhoto();
 weather.fetchWeather("Warsaw");
@@ -35,22 +36,26 @@ input.addEventListener("keyup", (event) => {
 })
 
 //suggestions
-input.addEventListener('keydown', () => {
+input.addEventListener('keyup', () => {
+  console.log(suggestionBox);
+  if(input.value.length > 2) {
+    suggestionBox.classList.add('active');
+    cities.fetchCities(input.value);
+    console.log('xd');
+    suggestions=document.querySelectorAll(".suggestions li")
+    // search by suggestion
+ } else {
+   suggestions=document.querySelectorAll(".suggestions li");
+   suggestionBox.classList.remove('active');
+   console.log('xd');
+   suggestions.innerHTML='';
+ }
 
-  let suggestions=document.querySelectorAll(".suggestions li")
   suggestions.forEach(item => item.addEventListener('click', ()=> {
     // unsplash.fetchPhoto();
       weather.searchWeather(item.firstElementChild.textContent);
       input.value='';
   }))
-
-  if(input.value.length > 2) {
-    cities.fetchCities(input.value);
-    // search by suggestion
- } else {
-   let suggestions=document.querySelectorAll(".suggestions li")
-   suggestions.innerHTML='';
- }
 
 });
 
