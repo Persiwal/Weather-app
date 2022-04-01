@@ -54,20 +54,21 @@ hr {
   position: absolute;
   top: 16%;
   background-color: rgb(37, 5, 5);
+  justify-content: center;
   opacity: 100%;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  gap: 1px;
+  gap: 0px;
   width: 30rem;
   padding: 0.81rem;
 }
 .search-box ul.suggestions li {
+  margin-right: 2rem;
   justify-content: center;
   margin-bottom: 0.25rem;
   border-bottom: 1px solid black;
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .search-box ul.suggestions li:hover {
