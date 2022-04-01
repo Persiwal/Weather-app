@@ -2,10 +2,10 @@ import { unsplash } from "./config/unsplash-config.js";
 import { weather } from "./config/weather-config.js";
 import { cities } from "./config/cities-config.js";
 
-const suggestionBox = document.querySelector("ul.suggestions");
+const suggestions = document.querySelector("ul.suggestions");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
-console.log(suggestionBox);
+
 //display this weather on first page load
   //unsplash.fetchPhoto();
 weather.fetchWeather("Warsaw");
@@ -37,12 +37,10 @@ input.addEventListener("keyup", (event) => {
 //suggestions
 input.addEventListener('keyup', () => {
   if(input.value.length > 2) {
-    suggestionBox.classList.add('active');
+    suggestions.classList.add('active');
     cities.fetchCities(input.value);
  } else {
-   suggestions=document.querySelectorAll(".suggestions li");
-   suggestionBox.classList.remove('active');
-   suggestions.innerHTML='';
+   suggestions.classList.remove('active');
  }
 });
 

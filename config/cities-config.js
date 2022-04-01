@@ -34,6 +34,8 @@ export const cities = {
         suggestionsList.forEach(item => item.addEventListener('click', ()=> {
             const city = item.firstElementChild.textContent;  
             weather.searchWeather(city);
+            suggestions.innerHTML='';
+            suggestions.classList.remove('active');
           }))
 }
 }

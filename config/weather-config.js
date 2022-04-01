@@ -54,6 +54,7 @@ export const weather = {
     weatherIcon.src = weatherIcons[description];
   },
   searchWeather: (value) => {
+    input.value = '';
     weather.fetchWeather(value);
   },
 };
