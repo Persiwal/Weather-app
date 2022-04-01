@@ -3,7 +3,6 @@ import { weather } from "./config/weather-config.js";
 import { cities } from "./config/cities-config.js";
 
 const suggestionBox = document.querySelector("ul.suggestions");
-let suggestions = document.querySelectorAll('.suggestions li')
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
 console.log(suggestionBox);
@@ -37,31 +36,14 @@ input.addEventListener("keyup", (event) => {
 
 //suggestions
 input.addEventListener('keyup', () => {
-  console.log(suggestionBox);
   if(input.value.length > 2) {
     suggestionBox.classList.add('active');
     cities.fetchCities(input.value);
-    console.log('xd');
-    suggestions=document.querySelectorAll(".suggestions li")
-    // search by suggestion
  } else {
    suggestions=document.querySelectorAll(".suggestions li");
    suggestionBox.classList.remove('active');
-   console.log('xd');
    suggestions.innerHTML='';
  }
-
-  suggestions.forEach(item => item.addEventListener('click', ()=> {
-    // unsplash.fetchPhoto();
-      weather.searchWeather(item.firstElementChild.textContent);
-      input.value='';
-  }))
-
 });
 
-// // search by suggestion
-// suggestions.forEach(item => item.addEventListener('click', ()=> {
-//  // unsplash.fetchPhoto();
-//   weather.searchWeather(item.firstElementChild.textContent);
-// }))
 

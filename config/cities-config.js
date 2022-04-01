@@ -1,4 +1,6 @@
+import {weather} from './weather-config.js'
 const suggestions = document.querySelector('.suggestions');
+
 
 export const cities = {
     
@@ -28,5 +30,11 @@ export const cities = {
             </li>
             `
         }
+        const suggestionsList = suggestions.querySelectorAll('li');
+        console.log(suggestionsList);
+        suggestionsList.forEach(item => item.addEventListener('click', ()=> {
+            const city = item.firstElementChild.textContent;  
+            weather.searchWeather(city);
+          }))
 }
 }
