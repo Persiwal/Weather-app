@@ -38,20 +38,21 @@ export const weather = {
     heading.innerText = `${name},`;
     countryName.innerText = `${countries[country]}`;
 
-    if (window.innerWidth < 415) {
+    if (window.innerWidth < 465) {
       temperature.innerText = `${parseInt(temp)}\xB0C`;
-    } else {
+      minTemp.innerText = `${temp_min}\xB0C`;
+      maxTemp.innerText = `${temp_max}\xB0C`;
+      hum.innerText = `${humidity}%`;
+      wind.innerText = `${speed}km/h`;
+      weatherIcon.src = weatherIcons[description];
+    } else { 
       temperature.innerText = `${temp}\xB0C`;
+      minTemp.innerText = `Min: ${temp_min}\xB0C`;
+      maxTemp.innerText = `Max: ${temp_max}\xB0C`;
+      hum.innerText = `Humidity: ${humidity}%`;
+      wind.innerText = `Wind: ${speed}km/h`;
+      weatherIcon.src = weatherIcons[description];   
     }
-
-    minTemp.innerText = `Min: ${temp_min}\xB0C`;
-
-    maxTemp.innerText = `Max: ${temp_max}\xB0C`;
-
-    hum.innerText = `Humidity: ${humidity}%`;
-    wind.innerText = `Wind: ${speed}km/h`;
-
-    weatherIcon.src = weatherIcons[description];
   },
   searchWeather: (value) => {
     input.value = '';

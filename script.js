@@ -5,6 +5,7 @@ import { cities } from "./config/cities-config.js";
 const suggestions = document.querySelector("ul.suggestions");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
+const cityHeader = document.querySelector('h1');
 
 //display this weather on first page load
   //unsplash.fetchPhoto();
@@ -45,3 +46,22 @@ input.addEventListener('keyup', () => {
 });
 
 
+window.addEventListener('resize',() => {
+  if(window.innerWidth<=465) {
+    let value = cityHeader.innerHTML;
+    console.log(value);
+    weather.searchWeather(value);
+  }
+})
+
+const randomCityNames = ['very long city name denver las vegas','short city']
+const shortCities = randomCityNames.map(result => {
+  let maxCityLength = 23;
+         if(result.length>maxCityLength) {
+             result =  result.substring(0,result.length-3);
+             return result + '...';
+         } else {
+             return result;
+         }});
+
+         console.log(shortCities);

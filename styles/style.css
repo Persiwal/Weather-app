@@ -157,13 +157,15 @@ ul li {
   }
 
   ul.stat-list {
-    flex-direction: column;
     gap: 0;
+    justify-content: center;
     font-size: 1.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
   }
   ul.stat-list li {
     gap: 0.1rem;
+    width: 40%;
     margin: 0;
   }
 
@@ -184,7 +186,7 @@ ul li {
   }
 
   main {
-    width: 100%;
+    width: 500px;
     min-height: 100vh;
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   }
@@ -209,6 +211,11 @@ ul li {
 
   input.city-input {
     width: 18rem;
+  }
+
+  ul.suggestions {
+    width: 18rem !important;
+    top: 10% !important;
   }
 
   #temp {

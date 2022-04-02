@@ -15,10 +15,20 @@ export const cities = {
     }
 },
     findMatches: (matchThis, cities) => {
-    return cities.filter(place => {
+    let maxCityLength = 18;
+    const matchedCities = cities.filter(place => {
       const regex= new RegExp(matchThis, 'gi');
-      return place.name.match(regex);
-    })
+      return place.name.match(regex)
+     }).map(result => {
+         console.log(result.name);
+         console.log(result.name.length)
+         if(result.name.length>maxCityLength) {
+             result.name = result.name.substring(0,maxCityLength-3) + '...';
+             return result
+         } else {
+             return result;
+         }});
+    return matchedCities;
     },
     displayMatches: (cities) => {
         suggestions.innerHTML='';
