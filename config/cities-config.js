@@ -14,6 +14,7 @@ export const cities = {
         console.log(err);
     }
 },
+
     findMatches: (matchThis, cities) => {
     let maxCityLength = 18;
     const matchedCities = cities.filter(place => {
@@ -30,6 +31,7 @@ export const cities = {
          }});
     return matchedCities;
     },
+
     displayMatches: (cities) => {
         suggestions.innerHTML='';
         for(let i=0;i<20 && i<cities.length;i++){
