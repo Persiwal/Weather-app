@@ -11,7 +11,7 @@
 
     <main>
       <section class="search-box">
-        <div class="search">
+        <div class="search-box__search">
         <input
           class="city-input"
           type="text"
@@ -21,23 +21,23 @@
           <img src="/images/search-icon.svg" alt="Search icon" />
         </button>
       </div>
-      <ul class="suggestions"></ul>
+      <ul class="search-box__suggestions"></ul>
       </section>
 
       <hr />
 
       <section class="weather-card">
-        <header>
+        <div class="weather-card__header">
           <h1>Tokyo,</h1>
           <p class="country-name-header"> Japan</p>
-        </header>
-        <div class="main-info">
+        </div>
+        <div class="weather-card__main-info">
           <div class="curr-status">
-            <img src="/images/sun-icon.svg" id="weather-icon" />
+            <img src="/images/sun-icon.svg" id="weather-icon" alt='current weather icon'/>
             <p id="temp">37&deg;C</p>
           </div>
         </div>
-        <div class="statistics">
+        <div class="weather-card__statistics">
           <ul class="stat-list">
             <li>
               <img src="/images/min-temp-icon.png" alt="min temp today" />
@@ -59,7 +59,7 @@
         </div>
       </section>
     </main>
-    
+
   </body>
   <script type="module" src="script.js"></script>
 </html>

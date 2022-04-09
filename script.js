@@ -2,7 +2,7 @@ import { unsplash } from "./config/unsplash-config.js";
 import { weather } from "./config/weather-config.js";
 import { cities } from "./config/cities-config.js";
 
-const suggestions = document.querySelector("ul.suggestions");
+const suggestions = document.querySelector(".search-box__suggestions");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
 const cityHeader = document.querySelector('h1');
@@ -54,7 +54,6 @@ window.addEventListener('resize',() => {
   }
 })
 
-const randomCityNames = ['very long city name denver las vegas','short city']
 const shortCities = randomCityNames.map(result => {
   let maxCityLength = 23;
          if(result.length>maxCityLength) {

@@ -1,5 +1,5 @@
 import {weather} from './weather-config.js'
-const suggestions = document.querySelector('.suggestions');
+const suggestions = document.querySelector('.search-box__suggestions');
 
 
 export const cities = {
