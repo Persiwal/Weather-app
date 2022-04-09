@@ -1,9 +1,9 @@
 .search-box {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0;
     flex-direction: column;
-    padding-left: 3rem;
 
     &__search {
         display: flex;
@@ -23,7 +23,7 @@
                 color: white;
             }
 
-            @media only screen and (max-width: 414px) {
+            @include breakpoint (mobileonly) {
                 width: 18rem;
             }
         }
@@ -73,9 +73,13 @@
             }
         }
 
-        @media only screen and (max-width: 414px) {
+        @include breakpoint (mobileonly) {
             width:18rem !important;
-            top:10% !important;
+            top:12% !important;
+            left:17px;
+            z-index:1;
+            justify-content: flex-start;
+            padding:1rem 0 1rem 2rem;
         }
     }
 }

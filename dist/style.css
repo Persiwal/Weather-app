@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&family=Outfit:wght@300;400;600;700&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,400&family=VT323&display=swap");
+*, *:hover, *:active {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
   background-size: 1920px 1080px;
@@ -21,9 +25,9 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   main {
-    width: 500px;
+    width: 100%;
     min-height: 100vh;
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   }
@@ -45,9 +49,9 @@ img {
 .search-box {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0;
   flex-direction: column;
-  padding-left: 3rem;
 }
 .search-box__search {
   display: flex;
@@ -72,7 +76,7 @@ img {
 .search-box__search .city-input::placeholder {
   color: white;
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .search-box__search .city-input {
     width: 18rem;
   }
@@ -115,10 +119,14 @@ img {
 .search-box__suggestions li:hover {
   background-color: rgba(120, 84, 136, 0.432);
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .search-box__suggestions {
     width: 18rem !important;
-    top: 10% !important;
+    top: 12% !important;
+    left: 17px;
+    z-index: 1;
+    justify-content: flex-start;
+    padding: 1rem 0 1rem 2rem;
   }
 }
 
@@ -136,7 +144,7 @@ img {
   font-size: 2rem;
   margin: 0;
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .weather-card__header {
     padding: 0;
     justify-content: center;
@@ -170,13 +178,13 @@ img {
 .weather-card__main-info .curr-status #weather-icon {
   transform: scale(3);
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .weather-card__main-info .curr-status #weather-icon {
     width: 64px;
     height: 64px;
   }
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .weather-card__main-info .curr-status {
     justify-content: center;
     flex-direction: row-reverse;
@@ -188,7 +196,7 @@ img {
     margin-top: 2rem;
   }
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .weather-card__main-info {
     display: block;
     min-height: 10rem;
@@ -206,7 +214,7 @@ img {
   align-items: center;
   gap: 0.2rem;
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 56.25rem) {
   .weather-card__statistics ul {
     gap: 0;
     justify-content: center;
