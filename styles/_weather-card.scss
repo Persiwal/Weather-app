@@ -9,6 +9,10 @@
         h1 {
             font-size: 3rem;
             margin: 0 0 0.625rem 0;
+
+            @include breakpoint (mobileonly) {
+                font-size:2rem;
+            }
         }
 
         .country-name-header {
@@ -61,7 +65,7 @@
                 }
             } 
             @include breakpoint (mobileonly) {
-                justify-content: center;
+                justify-content: flex-end;
                 flex-direction: row-reverse;
                 padding: 0;
                 gap: 80px;
