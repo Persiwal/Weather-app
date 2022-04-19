@@ -99,14 +99,30 @@ img {
   }
 }
 .search-box__search button {
-  background-color: rgba(128, 128, 128, 0.5);
   border-radius: 50%;
   width: 3.12rem;
   height: 3.12rem;
+  background-color: rgba(128, 128, 128, 0.5);
   border: 0.06rem solid rgba(128, 128, 128, 0.5);
 }
 .search-box__search button:hover {
   background-color: rgba(128, 128, 128, 0.8);
+}
+@media (min-width: 401px) {
+  .search-box__search button {
+    position: relative;
+    right: 56px;
+    top: 4px;
+    background: none;
+    border: none;
+  }
+}
+@media (min-width: 751px) {
+  .search-box__search button {
+    position: static;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: 0.06rem solid rgba(128, 128, 128, 0.5);
+  }
 }
 .search-box__suggestions {
   display: none;
