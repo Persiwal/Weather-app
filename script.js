@@ -53,14 +53,3 @@ window.addEventListener('resize',() => {
     weather.searchWeather(value);
   }
 })
-
-const shortCities = randomCityNames.map(result => {
-  let maxCityLength = 23;
-         if(result.length>maxCityLength) {
-             result =  result.substring(0,result.length-3);
-             return result + '...';
-         } else {
-             return result;
-         }});
-
-         console.log(shortCities);

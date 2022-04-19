@@ -21,8 +21,6 @@ export const cities = {
       const regex= new RegExp(matchThis, 'gi');
       return place.name.match(regex)
      }).map(result => {
-         console.log(result.name);
-         console.log(result.name.length)
          if(result.name.length>maxCityLength) {
              result.name = result.name.substring(0,maxCityLength-3) + '...';
              return result

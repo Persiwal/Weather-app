@@ -37,8 +37,8 @@ main {
             border-radius:0;
     }
 
-    @include breakpointDOWN(tablet) {
-        width: calc(100% - 2.5rem);
+    @include breakpointUP(tablet) {
+      width: calc(100% - 2.5rem);
     }
 }
 

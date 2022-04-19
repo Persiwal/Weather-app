@@ -5,6 +5,7 @@
     gap: 0;
     flex-direction: column;
 
+
     &__search {
         display: flex;
 
@@ -26,6 +27,12 @@
             @include breakpointDOWN (mobileonly) {
                 width: 18rem;
             }
+        }
+
+        @include breakpointUP (tablet) {
+            width: calc(100% - 2rem);
+
+            
         }
 
         button {

@@ -25,7 +25,7 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
 }
-@media (min-width: 1080px) {
+@media (min-width: 751px) {
   main {
     max-width: 41.25rem;
   }
@@ -38,7 +38,7 @@ main {
     border-radius: 0;
   }
 }
-@media (max-width: 1079px) {
+@media (min-width: 401px) {
   main {
     width: calc(100% - 2.5rem);
   }
@@ -90,6 +90,11 @@ img {
 @media (max-width: 400px) {
   .search-box__search .city-input {
     width: 18rem;
+  }
+}
+@media (min-width: 401px) {
+  .search-box__search {
+    width: calc(100% - 2rem);
   }
 }
 .search-box__search button {
