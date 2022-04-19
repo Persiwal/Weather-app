@@ -46,10 +46,10 @@ input.addEventListener('keyup', () => {
 });
 
 
-window.addEventListener('resize',() => {
-  if(window.innerWidth<=465) {
-    let value = cityHeader.innerHTML;
-    console.log(value);
-    weather.searchWeather(value);
-  }
-})
+// window.addEventListener('resize',() => {
+//   if(window.innerWidth<=465) {
+//     let value = cityHeader.innerHTML;
+//     console.log(value);
+//     weather.searchWeather(value);
+//   }
+// })
