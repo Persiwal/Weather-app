@@ -19,19 +19,28 @@ body {
 
 main {
   background-color: rgba(0, 0, 0, 0.8);
-  width: 41.25rem;
   display: flex;
   flex-direction: column;
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   border-radius: 0.5rem;
   box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
 }
-@media (max-width: 56.25rem) {
+@media (min-width: 1080px) {
+  main {
+    max-width: 41.25rem;
+  }
+}
+@media (max-width: 400px) {
   main {
     width: 100%;
     min-height: 100vh;
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     border-radius: 0;
+  }
+}
+@media (max-width: 1079px) {
+  main {
+    width: calc(100% - 2.5rem);
   }
 }
 
@@ -78,7 +87,7 @@ img {
 .search-box__search .city-input::placeholder {
   color: white;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .search-box__search .city-input {
     width: 18rem;
   }
@@ -121,7 +130,7 @@ img {
 .search-box__suggestions li:hover {
   background-color: rgba(120, 84, 136, 0.432);
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .search-box__suggestions {
     width: 18rem !important;
     top: 12% !important;
@@ -141,7 +150,7 @@ img {
   font-size: 3rem;
   margin: 0 0 0.625rem 0;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__header h1 {
     font-size: 2rem;
   }
@@ -151,7 +160,7 @@ img {
   font-size: 2rem;
   margin: 0;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__header {
     padding: 0;
     justify-content: center;
@@ -185,13 +194,13 @@ img {
 .weather-card__main-info .curr-status #weather-icon {
   transform: scale(3);
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__main-info .curr-status #weather-icon {
     width: 64px;
     height: 64px;
   }
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__main-info .curr-status {
     justify-content: flex-end;
     flex-direction: row-reverse;
@@ -203,7 +212,7 @@ img {
     margin-top: 2rem;
   }
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__main-info {
     display: block;
     min-height: 10rem;
@@ -221,7 +230,7 @@ img {
   align-items: center;
   gap: 0.2rem;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 400px) {
   .weather-card__statistics ul {
     gap: 0;
     justify-content: center;

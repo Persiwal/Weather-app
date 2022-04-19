@@ -23,7 +23,7 @@
                 color: white;
             }
 
-            @include breakpoint (mobileonly) {
+            @include breakpointDOWN (mobileonly) {
                 width: 18rem;
             }
         }
@@ -73,7 +73,7 @@
             }
         }
 
-        @include breakpoint (mobileonly) {
+        @include breakpointDOWN (mobileonly) {
             width:18rem !important;
             top:12% !important;
             left:17px;
