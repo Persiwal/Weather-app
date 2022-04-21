@@ -9,7 +9,7 @@ const cityHeader = document.querySelector('h1');
 
 //display this weather on first page load
   //unsplash.fetchPhoto();
-weather.fetchWeather("Warsaw");
+  weather.searchWeather('Warsaw');
 
 
 // search by clicking button
