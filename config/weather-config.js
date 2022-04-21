@@ -10,6 +10,7 @@ const maxTemp = document.querySelector("#max-temp");
 const hum = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 const weatherIcon = document.querySelector("#weather-icon");
+const forecastList = document.querySelector('.forecast__list');
 
 export const weather = {
     apiKey: "4741d22028b090101d3735b88548e200",
@@ -67,6 +68,7 @@ export const weather = {
 
     displaySevenDaysWeather: (data) => {
         let days = [];
+        forecastList.innerHTML = '';
 
         for (let i = 1; i < data.daily.length; i++) {
             let weather = {
@@ -76,7 +78,16 @@ export const weather = {
 
             days.push(weather);
         }
-        console.log(days);
+        
+        days.map((day,index) => {
+          return (forecastList.innerHTML += `
+            <li>
+              <h3>${index}</h3>
+              <img src="${weatherIcons[day.description]}">
+              <span>${day.temp}\xB0C</span>
+            </li>
+            `);
+        })
     },
 
     searchWeather: (value) => {
