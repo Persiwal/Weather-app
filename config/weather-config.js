@@ -65,9 +65,23 @@ export const weather = {
         weatherIcon.src = weatherIcons[description];
     },
 
+    displaySevenDaysWeather: (data) => {
+        let days = [];
+
+        for (let i = 1; i < data.daily.length; i++) {
+            let weather = {
+                temp: data.daily[i].temp.day,
+                description: data.daily[i].weather[0].description,
+            };
+
+            days.push(weather);
+        }
+        console.log(days);
+    },
+
     searchWeather: (value) => {
         weather.fetchCurrentWeather(value);
         weather.fetchSevenDaysWeather(value);
-        input.value='';
+        input.value = "";
     },
 };
