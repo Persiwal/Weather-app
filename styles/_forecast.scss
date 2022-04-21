@@ -1,0 +1,12 @@
+.forecast {
+    ul {
+        display: flex;
+
+        list-style: none;
+        text-align: center;
+
+        li {
+            width: 15%;
+        }
+    }
+}
