@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/dist/style.css" />
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/dist/style.css" />
+    </head>
+    <body>
+        <main>
+            <section class="search-box">
+                <div class="search-box__search">
+                    <input
+                        class="city-input"
+                        type="text"
+                        placeholder="Search by city name"
+                    />
+                    <button class="search-button">
+                        <img src="/images/search-icon.svg" alt="Search icon" />
+                    </button>
+                </div>
+                <ul class="search-box__suggestions"></ul>
+            </section>
 
-    <main>
-      <section class="search-box">
-        <div class="search-box__search">
-        <input
-          class="city-input"
-          type="text"
-          placeholder="Search by city name"
-        />
-        <button class="search-button">
-          <img src="/images/search-icon.svg" alt="Search icon" />
-        </button>
-      </div>
-      <ul class="search-box__suggestions"></ul>
-      </section>
+            <hr />
 
-      <hr />
-
-      <section class="weather-card">
-        <div class="weather-card__header">
-          <h1>Tokyo,</h1>
-          <p class="country-name-header"> Japan</p>
-        </div>
-        <div class="weather-card__main-info">
-          <div class="curr-status">
-            <img src="/images/sun-icon.svg" id="weather-icon" alt='current weather icon'/>
-            <p id="temp">37&deg;C</p>
-          </div>
-        </div>
-        <div class="weather-card__statistics">
-          <ul class="stat-list">
-            <li>
-              <img src="/images/min-temp-icon.png" alt="min temp today" />
-              <p id="min-temp">Min:</p>
-            </li>
-            <li>
-              <img src="/images/max-temp-icon.png" alt="max temp today" />
-              <p id="max-temp">Max:</p>
-            </li>
-            <li>
-              <img src="/images/humidity-icon.png" alt="humidity" />
-              <p id="humidity">Humidity: 47%</p>
-            </li>
-            <li>
-              <img src="/images/wind-icon.png" alt="wind speed" />
-              <p id="wind">Wind: 6 km/h</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-  </body>
-  <script type="module" src="script.js"></script>
+            <section class="weather-card">
+                <div class="weather-card__header">
+                    <h1>Tokyo,</h1>
+                    <p class="country-name-header">Japan</p>
+                </div>
+                <div class="weather-card__main-info">
+                    <div class="curr-status">
+                        <img
+                            src="/images/sun-icon.svg"
+                            id="weather-icon"
+                            alt="current weather icon"
+                        />
+                        <p id="temp">37&deg;C</p>
+                    </div>
+                </div>
+                <div class="weather-card__statistics">
+                    <ul class="stat-list">
+                        <li>
+                            <img
+                                src="/images/min-temp-icon.png"
+                                alt="min temp today"
+                            />
+                            <p id="min-temp">Min:</p>
+                        </li>
+                        <li>
+                            <img
+                                src="/images/max-temp-icon.png"
+                                alt="max temp today"
+                            />
+                            <p id="max-temp">Max:</p>
+                        </li>
+                        <li>
+                            <img
+                                src="/images/humidity-icon.png"
+                                alt="humidity"
+                            />
+                            <p id="humidity">Humidity: 47%</p>
+                        </li>
+                        <li>
+                            <img src="/images/wind-icon.png" alt="wind speed" />
+                            <p id="wind">Wind: 6 km/h</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="forecast">
+                <ul class="forecast__list">
+                </ul>
+            </section>
+        </main>
+    </body>
+    <script type="module" src="script.js"></script>
 </html>
