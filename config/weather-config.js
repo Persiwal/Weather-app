@@ -1,4 +1,4 @@
-import { countries, weatherIcons } from "../helpers.js";
+import { countries, weatherIcons, dayNames } from "../helpers.js";
 import { geoLocation } from "./geolocation-config.js";
 
 const input = document.querySelector(".city-input");
@@ -10,7 +10,7 @@ const maxTemp = document.querySelector("#max-temp");
 const hum = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 const weatherIcon = document.querySelector("#weather-icon");
-const forecastList = document.querySelector('.forecast__list');
+const forecastList = document.querySelector(".forecast__list");
 
 export const weather = {
     apiKey: "4741d22028b090101d3735b88548e200",
@@ -68,26 +68,32 @@ export const weather = {
 
     displaySevenDaysWeather: (data) => {
         let days = [];
-        forecastList.innerHTML = '';
+        forecastList.innerHTML = "";
 
         for (let i = 1; i < data.daily.length; i++) {
             let weather = {
                 temp: data.daily[i].temp.day,
                 description: data.daily[i].weather[0].description,
+                time: data.daily[i].dt,
             };
 
             days.push(weather);
         }
-        
-        days.map((day,index) => {
-          return (forecastList.innerHTML += `
+
+        days.map((day) => {
+            //convert time to day name
+            let timestamp = day.time;
+            let date = new Date(timestamp * 1000); // *1000 to convert seconds to miliseconds (JS timestamp is in miliseconds)
+            let dayName = dayNames[date.getDay()]; // get day name from helper object
+
+            return (forecastList.innerHTML += `
             <li>
-              <h3>${index}</h3>
+              <h3>${dayName}</h3>
               <img src="${weatherIcons[day.description]}">
               <span>${day.temp}\xB0C</span>
             </li>
             `);
-        })
+        });
     },
 
     searchWeather: (value) => {

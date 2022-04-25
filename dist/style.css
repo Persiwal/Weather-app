@@ -26,7 +26,7 @@ main {
 }
 @media (min-width: 751px) {
   main {
-    max-width: 41.25rem;
+    max-width: 47.25rem;
     padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   }
 }
@@ -69,7 +69,7 @@ img {
   display: flex;
 }
 .search-box__search .city-input {
-  width: 30rem;
+  width: 40rem;
   padding: 0.81rem;
   border-radius: 1.25rem;
   outline: none;
@@ -269,9 +269,19 @@ img {
 
 .forecast ul {
   display: flex;
+  background-color: rgba(192, 192, 192, 0.1);
+  padding: 0.625rem;
+  border: 0.0625rem solid black;
+  border-radius: 0.4375rem;
   list-style: none;
   text-align: center;
 }
 .forecast ul li {
   width: 15%;
+}
+.forecast ul li:not(:last-child) {
+  border-right: 1px solid black;
+}
+.forecast ul li h3 {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
