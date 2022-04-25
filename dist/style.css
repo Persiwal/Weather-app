@@ -9,7 +9,7 @@ body {
   background-size: 1920px 1080px;
   display: flex;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 75vh;
   align-items: center;
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -265,4 +265,13 @@ img {
     width: 40%;
     margin: 0;
   }
+}
+
+.forecast ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+.forecast ul li {
+  width: 15%;
 }/*# sourceMappingURL=style.css.map */
