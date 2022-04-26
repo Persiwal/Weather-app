@@ -46,11 +46,11 @@ main {
 }
 
 hr {
+  margin-top: 20px;
   width: 100%;
-  border: 0.06rem solid grey;
-  margin-top: 1.87rem;
-  margin-bottom: 1.87rem;
-  opacity: 60%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
 img {
@@ -165,6 +165,7 @@ img {
 
 .weather-card__header {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   gap: 0.31rem;
 }
@@ -202,19 +203,19 @@ img {
 .weather-card__main-info {
   padding-left: 2.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 2rem;
-  gap: 3.75rem;
-  max-height: 6.25rem;
+  gap: 8rem;
 }
 .weather-card__main-info .curr-status {
   display: flex;
   align-items: center;
   gap: 1.87rem;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .weather-card__main-info .curr-status #weather-icon {
-  transform: scale(3);
+  transform: scale(6);
 }
 @media (max-width: 400px) {
   .weather-card__main-info .curr-status #weather-icon {
