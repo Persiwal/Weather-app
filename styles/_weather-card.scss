@@ -60,20 +60,29 @@
             #weather-icon {
                 transform: scale(6);
 
+                @include breakpointUP(tablet) {
+                    transofmr:scale(3);
+                }
+
                 @include breakpointDOWN (mobileonly) {
                     width: 64px;
                     height: 64px;
+                    transform: scale(2);
                 }
             } 
             @include breakpointDOWN (mobileonly) {
-                justify-content: flex-end;
-                flex-direction: row-reverse;
+                display:block;
+                margin-left: 50%;
+                transform: translateX(-50%);
                 padding: 0;
-                gap: 80px;
+                gap:40px;
 
                 #temp {
-                    font-size: 5rem;
                     margin-top: 2rem;
+
+                    @include breakpointDOWN(mobileonly) {
+                        font-size:3rem;
+                    }
                 }
             }  
         }
