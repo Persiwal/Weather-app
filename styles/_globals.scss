@@ -22,8 +22,8 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
-    box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+    border-radius: .5rem;
+    box-shadow: .8rem .8rem .8rem rgba(0, 0, 0, 0.6);
 
     @include breakpointUP(laptop) {
         max-width: 47.25rem;
@@ -33,7 +33,7 @@ main {
     @include breakpointDOWN(mobileonly) {
         width: 100%;
         min-height: 100vh;
-        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+        padding: 1.5rem .5rem .5rem .5rem;
         border-radius: 0;
     }
 
@@ -44,7 +44,7 @@ main {
 }
 
 hr {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
     border: 0;
     height: 1px;
@@ -60,3 +60,4 @@ img {
     width: 1.5rem;
     height: 1.5rem;
 }
+
