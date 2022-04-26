@@ -1,7 +1,7 @@
 .forecast {
     ul {
         display: flex;
-        background-color: rgba( 192, 192, 192, 0.1);
+        background-color: rgba(192, 192, 192, 0.1);
         padding: 0.625rem;
         border: 0.0625rem solid black;
         border-radius: 0.4375rem;
@@ -14,7 +14,6 @@
             &:not(:last-child) {
                 border-right: 1px solid black;
             }
-            
 
             h3 {
                 margin: 0;
