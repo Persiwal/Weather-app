@@ -52,7 +52,7 @@
             }
 
             @include breakpointUP(laptop) {
-                position:static;
+                position: static;
                 background-color: rgba(128, 128, 128, 0.5);
                 border: 0.06rem solid rgba(128, 128, 128, 0.5);
             }
@@ -62,7 +62,7 @@
     &__suggestions {
         display: none;
         position: absolute;
-        top: 16%;
+        top: 20%;
         background-color: rgb(37, 5, 5);
         justify-content: center;
         opacity: 100%;
@@ -70,8 +70,13 @@
         padding: 0;
         margin: 0;
         gap: 0px;
-        width: 30rem;
+        max-width: 40rem;
         padding: 0.81rem;
+        z-index: 100;
+
+        @include breakpointUP(tablet) {
+            width: calc(100% - 4rem);
+        }
 
         &.active {
             display: flex;

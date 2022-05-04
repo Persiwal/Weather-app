@@ -131,7 +131,7 @@ p {
 .search-box__suggestions {
   display: none;
   position: absolute;
-  top: 16%;
+  top: 20%;
   background-color: rgb(37, 5, 5);
   justify-content: center;
   opacity: 100%;
@@ -139,8 +139,14 @@ p {
   padding: 0;
   margin: 0;
   gap: 0px;
-  width: 30rem;
+  max-width: 40rem;
   padding: 0.81rem;
+  z-index: 100;
+}
+@media (min-width: 401px) {
+  .search-box__suggestions {
+    width: calc(100% - 4rem);
+  }
 }
 .search-box__suggestions.active {
   display: flex;

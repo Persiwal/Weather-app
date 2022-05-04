@@ -8,12 +8,13 @@ const input = document.querySelector(".city-input");
 const cityHeader = document.querySelector("h1");
 
 //display this weather on first page load
-//unsplash.fetchPhoto();
+unsplash.fetchPhoto();
 weather.searchWeather("Warsaw");
+
 // search by clicking button
 searchButton.addEventListener("click", () => {
     if (input.value) {
-        //unsplash.fetchPhoto();
+        unsplash.fetchPhoto();
         weather.searchWeather(input.value);
         input.value = "";
     }
@@ -27,7 +28,7 @@ input.addEventListener("keyup", (event) => {
         input.style.borderRadius = `1.25rem`;
     }
     if (event.key === "Enter" && input.value) {
-        // unsplash.fetchPhoto();
+        unsplash.fetchPhoto();
         weather.searchWeather(input.value);
         input.value = "";
     }
