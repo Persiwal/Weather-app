@@ -292,17 +292,21 @@ p {
 .forecast ul {
   display: flex;
   background-color: rgba(192, 192, 192, 0.1);
-  padding: 0.625rem;
   border: 0.0625rem solid black;
   border-radius: 0.4375rem;
   list-style: none;
   text-align: center;
 }
 .forecast ul li {
-  width: 15%;
+  width: 25%;
+  padding: 0.625rem;
+  transition: 0.5s ease-in-out;
 }
 .forecast ul li:not(:last-child) {
   border-right: 1px solid black;
+}
+.forecast ul li:hover {
+  background-color: rgba(192, 192, 192, 0.5);
 }
 .forecast ul li h3 {
   margin: 0;
