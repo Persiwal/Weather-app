@@ -90,7 +90,7 @@ export const weather = {
             <li>
               <h3>${dayName}</h3>
               <img src="${weatherIcons[day.description]}">
-              <span>${day.temp}\xB0C</span>
+              <span>${day.temp.toFixed(2)}\xB0C</span>
             </li>
             `);
         });
