@@ -1,19 +1,15 @@
 @mixin breakpointUP($point) {
     @if $point==desktop {
         @media (min-width: 1280px) {
-            @content ;
+            @content;
         }
-    }
-
-    @else if $point==laptop {
+    } @else if $point==laptop {
         @media (min-width: 751px) {
-            @content ;
+            @content;
         }
-    }
-
-    @else if $point==tablet {
+    } @else if $point==tablet {
         @media (min-width: 401px) {
-            @content ;
+            @content;
         }
     }
 }
@@ -21,20 +17,15 @@
 @mixin breakpointDOWN($point) {
     @if $point==laptop {
         @media (max-width: 1279px) {
-            @content ;
+            @content;
         }
-    }
-
-    @else if $point==tablet {
+    } @else if $point==tablet {
         @media (max-width: 750px) {
-            @content ;
+            @content;
         }
-    }
-
-    @else if $point==mobileonly {
+    } @else if $point==mobileonly {
         @media (max-width: 400px) {
-            @content ;
+            @content;
         }
-
     }
 }
