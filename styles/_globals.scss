@@ -16,30 +16,50 @@ body {
     color: white;
     padding: 0;
     margin: 0;
+
+    @include breakpointDOWN(mobileonly) {
+        overflow-x: hidden;
+    }
 }
 
 main {
-    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
-    border-radius: .5rem;
-    box-shadow: .8rem .8rem .8rem rgba(0, 0, 0, 0.6);
 
     @include breakpointUP(laptop) {
         max-width: 47.25rem;
-        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
     }
 
     @include breakpointDOWN(mobileonly) {
         width: 100%;
         min-height: 100vh;
-        padding: 1.5rem .5rem .5rem .5rem;
-        border-radius: 0;
     }
 
     @include breakpointUP(tablet) {
         padding: 1.25rem 1rem;
         width: calc(100% - 2.5rem);
+    }
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+
+    @include breakpointUP(laptop) {
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    }
+
+    @include breakpointDOWN(mobileonly) {
+        width: 100%;
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+        border-radius: 0;
+    }
+
+    @include breakpointUP(tablet) {
+        padding: 1.25rem 1rem;
     }
 }
 
@@ -62,5 +82,5 @@ img {
 }
 
 p {
-    margin:0;
+    margin: 0;
 }
