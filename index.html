@@ -9,23 +9,26 @@
     </head>
     <body>
         <main>
-            <section class="search-box">
-                <div class="search-box__search">
-                    <input
-                        class="city-input"
-                        type="text"
-                        placeholder="Search by city name"
-                    />
-                    <button class="search-button">
-                        <img src="/images/search-icon.svg" alt="Search icon" />
-                    </button>
+            <section class="card weather-card">
+                <div class="search-box">
+                    <div class="search-box__search">
+                        <input
+                            class="city-input"
+                            type="text"
+                            placeholder="Search by city name"
+                        />
+                        <button class="search-button">
+                            <img
+                                src="/images/search-icon.svg"
+                                alt="Search icon"
+                            />
+                        </button>
+                    </div>
+                    <ul class="search-box__suggestions"></ul>
                 </div>
-                <ul class="search-box__suggestions"></ul>
-            </section>
 
-            <hr />
+                <hr />
 
-            <section class="weather-card">
                 <div class="weather-card__header">
                     <h1>Tokyo,</h1>
                     <p class="country-name-header">Japan</p>
@@ -70,9 +73,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="forecast">
-                <ul class="forecast__list">
-                </ul>
+            <section class="card forecast">
+                <ul class="forecast__list"></ul>
             </section>
         </main>
     </body>
