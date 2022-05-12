@@ -97,8 +97,11 @@ export const weather = {
     },
 
     searchWeather: (value) => {
-        weather.fetchCurrentWeather(value);
-        weather.fetchSevenDaysWeather(value);
+        if (weather.fetchCurrentWeather(value)) {
+            weather.fetchSevenDaysWeather(value);
+        } else {
+            return;
+        }
         input.value = "";
     },
 };
