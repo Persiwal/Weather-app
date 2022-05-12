@@ -6,7 +6,7 @@
 
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
-  background-size: 1920px 1080px;
+  background-size: 120rem 67.5rem;
   display: flex;
   justify-content: center;
   min-height: 75vh;
@@ -16,46 +16,71 @@ body {
   padding: 0;
   margin: 0;
 }
+@media (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 main {
-  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
-  border-radius: 0.5rem;
-  box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.6);
+  gap: 2.5rem;
 }
 @media (min-width: 751px) {
   main {
-    max-width: 47.25rem;
-    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    max-width: 756px;
   }
 }
 @media (max-width: 400px) {
   main {
     width: 100%;
     min-height: 100vh;
-    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 0;
   }
 }
 @media (min-width: 401px) {
   main {
-    padding: 1.25rem 1rem;
-    width: calc(100% - 2.5rem);
+    padding: 20px 16px;
+    width: calc(100% - 40px);
+  }
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 12.8px 12.8px 12.8px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 751px) {
+  .card {
+    padding: 20px 20px 20px 40px;
+  }
+}
+@media (max-width: 400px) {
+  .card {
+    width: 100%;
+    padding: 24px 8px 8px 8px;
+    border-radius: 0;
+  }
+}
+@media (min-width: 401px) {
+  .card {
+    padding: 20px 16px;
   }
 }
 
 hr {
-  margin-top: 1.25rem;
+  margin-top: 20px;
   width: 100%;
   border: 0;
-  height: 1px;
+  height: 0.0625rem;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
 img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 24px;
+  height: 24px;
 }
 
 p {
@@ -177,7 +202,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 50px;
   gap: 0.31rem;
+}
+@media (max-width: 400px) {
+  .weather-card__header {
+    margin-bottom: 0px;
+  }
 }
 .weather-card__header h1 {
   font-size: 3rem;
@@ -206,6 +237,7 @@ p {
   }
   .weather-card__header p.country-name-header {
     margin: 0;
+    margin-bottom: 50px;
     padding-top: 0px;
     padding-left: 7rem;
   }
@@ -223,6 +255,7 @@ p {
   align-items: center;
   gap: 4rem;
   font-size: 5rem;
+  margin-bottom: 50px;
 }
 .weather-card__main-info .curr-status #weather-icon {
   transform: scale(6);
@@ -242,6 +275,7 @@ p {
 @media (max-width: 400px) {
   .weather-card__main-info .curr-status {
     display: block;
+    margin-bottom: 0;
     margin-left: 50%;
     transform: translateX(-50%);
     padding: 0;
@@ -289,21 +323,25 @@ p {
   }
 }
 
+.forecast h2 {
+  margin: 0;
+  padding-left: 1.25rem;
+}
 .forecast ul {
   display: flex;
   background-color: rgba(192, 192, 192, 0.1);
-  border: 0.0625rem solid black;
-  border-radius: 0.4375rem;
+  border: 1px solid black;
+  border-radius: 7px;
   list-style: none;
   text-align: center;
 }
 .forecast ul li {
   width: 25%;
-  padding: 0.625rem;
+  padding: 10px;
   transition: 0.5s ease-in-out;
 }
 .forecast ul li:not(:last-child) {
-  border-right: 1px solid black;
+  border-right: 0.0625rem solid black;
 }
 .forecast ul li:hover {
   background-color: rgba(192, 192, 192, 0.5);
