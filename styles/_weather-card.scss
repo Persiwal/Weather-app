@@ -3,6 +3,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        margin-bottom: 50px;
         gap: 0.31rem;
 
         h1 {
@@ -33,6 +34,7 @@
 
             p.country-name-header {
                 margin: 0;
+                margin-bottom: 50px;
                 padding-top: 0px;
                 padding-left: 7rem;
             }
@@ -52,6 +54,7 @@
             align-items: center;
             gap: 4rem;
             font-size: 5rem;
+            margin-bottom: 50px;
 
             #weather-icon {
                 transform: scale(6);
