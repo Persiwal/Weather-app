@@ -1,19 +1,24 @@
 .forecast {
+    h2 {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
     ul {
         display: flex;
         background-color: rgba(192, 192, 192, 0.1);
-        border: 0.0625rem solid black;
-        border-radius: 0.4375rem;
+        border: 1px solid black;
+        border-radius: 7px;
         list-style: none;
         text-align: center;
 
         li {
             width: 25%;
-            padding: 0.625rem;
+            padding: 10px;
             transition: 0.5s ease-in-out;
 
             &:not(:last-child) {
-                border-right: 1px solid black;
+                border-right: 0.0625rem solid black;
             }
 
             &:hover {
