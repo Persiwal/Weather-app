@@ -5,9 +5,8 @@ import { cities } from "./config/cities-config.js";
 const suggestions = document.querySelector(".search-box__suggestions");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".city-input");
-const cityHeader = document.querySelector("h1");
 
-//display this weather on first page load
+// display this weather on first page load
 unsplash.fetchPhoto();
 weather.searchWeather("Warsaw");
 
@@ -34,7 +33,7 @@ input.addEventListener("keyup", (event) => {
     }
 });
 
-//suggestions
+// search by suggestions
 input.addEventListener("keyup", () => {
     if (input.value.length > 2) {
         suggestions.classList.add("active");
@@ -43,11 +42,3 @@ input.addEventListener("keyup", () => {
         suggestions.classList.remove("active");
     }
 });
-
-// window.addEventListener('resize',() => {
-//   if(window.innerWidth<=465) {
-//     let value = cityHeader.innerHTML;
-//     console.log(value);
-//     weather.searchWeather(value);
-//   }
-// })

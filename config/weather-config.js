@@ -10,7 +10,8 @@ const maxTemp = document.querySelector("#max-temp");
 const hum = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 const weatherIcon = document.querySelector("#weather-icon");
-const forecastList = document.querySelector(".forecast__list");
+const dailyForecastList = document.querySelector(".forecast__daily__list");
+const hourlyForecastList = document.querySelector(".forecast__hourly__list");
 
 export const weather = {
     apiKey: "4741d22028b090101d3735b88548e200",
@@ -45,6 +46,20 @@ export const weather = {
         }
     },
 
+    fetchHourlyWeather: async (city) => {
+        const coords = await geoLocation.fetchCoords(city);
+
+        try {
+            const response = await fetch(
+                `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=current,minutely,daily,alerts&units=metric&appid=${weather.apiKey}`
+            );
+            const data = await response.json();
+            return weather.displayHourlyWeather(data);
+        } catch (err) {
+            console.error(err);
+        }
+    },
+
     displayCurrentWeather: (data) => {
         const {
             name,
@@ -68,7 +83,7 @@ export const weather = {
 
     displaySevenDaysWeather: (data) => {
         let days = [];
-        forecastList.innerHTML = "";
+        dailyForecastList.innerHTML = "";
 
         for (let i = 1; i < data.daily.length; i++) {
             let weather = {
@@ -86,7 +101,7 @@ export const weather = {
             let date = new Date(timestamp * 1000); // *1000 to convert seconds to miliseconds (JS timestamp is in miliseconds)
             let dayName = dayNames[date.getDay()]; // get day name from helper object
 
-            return (forecastList.innerHTML += `
+            return (dailyForecastList.innerHTML += `
             <li>
               <h3>${dayName}</h3>
               <img src="${weatherIcons[day.description]}">
@@ -96,9 +111,46 @@ export const weather = {
         });
     },
 
+    displayHourlyWeather: (data) => {
+        let hours = [];
+        hourlyForecastList.innerHTML = "";
+        const currentTime = new Date();
+
+        for (let i = 1; i < data.hourly.length; i++) {
+            let timestamp = data.hourly[i].dt;
+            let date = new Date(timestamp * 1000); // *1000 to convert seconds to miliseconds (JS timestamp is in miliseconds)
+            let formatedHour = date.getHours();
+            let hourExist = hours.some((item) => item.time === formatedHour);
+
+            if (
+                formatedHour > currentTime.getHours() &&
+                formatedHour < currentTime.getHours() + 8 &&
+                !hourExist
+            ) {
+                let weather = {
+                    temp: data.hourly[i].temp,
+                    description: data.hourly[i].weather[0].description,
+                    time: formatedHour,
+                };
+                hours.push(weather);
+            }
+        }
+
+        hours.map((hour) => {
+            return (hourlyForecastList.innerHTML += `
+            <li>
+              <h3>${hour.time}:00</h3>
+              <img src="${weatherIcons[hour.description]}">
+              <span>${hour.temp.toFixed(2)}\xB0C</span>
+            </li>
+            `);
+        });
+    },
+
     searchWeather: (value) => {
         if (weather.fetchCurrentWeather(value)) {
             weather.fetchSevenDaysWeather(value);
+            weather.fetchHourlyWeather(value);
         } else {
             return;
         }
