@@ -323,11 +323,11 @@ p {
   }
 }
 
-.forecast h2 {
+.forecast__daily h2, .forecast__hourly h2 {
   margin: 0;
   padding-left: 1.25rem;
 }
-.forecast ul {
+.forecast__daily ul, .forecast__hourly ul {
   display: flex;
   background-color: rgba(192, 192, 192, 0.1);
   border: 1px solid black;
@@ -335,17 +335,17 @@ p {
   list-style: none;
   text-align: center;
 }
-.forecast ul li {
+.forecast__daily ul li, .forecast__hourly ul li {
   width: 25%;
   padding: 10px;
   transition: 0.5s ease-in-out;
 }
-.forecast ul li:not(:last-child) {
+.forecast__daily ul li:not(:last-child), .forecast__hourly ul li:not(:last-child) {
   border-right: 0.0625rem solid black;
 }
-.forecast ul li:hover {
+.forecast__daily ul li:hover, .forecast__hourly ul li:hover {
   background-color: rgba(192, 192, 192, 0.5);
 }
-.forecast ul li h3 {
+.forecast__daily ul li h3, .forecast__hourly ul li h3 {
   margin: 0;
 }/*# sourceMappingURL=style.css.map */
