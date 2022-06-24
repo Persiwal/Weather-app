@@ -1,107 +1,102 @@
 .search-box {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+
+  &__search {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    flex-direction: column;
 
-    &__search {
-        display: flex;
+    .city-input {
+      width: 40rem;
+      padding: 0.81rem;
+      border-radius: 1.25rem;
+      outline: none;
+      color: white;
+      border-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(128, 128, 128, 0.5);
+      opacity: 60%;
+      font-size: 1.5rem;
 
-        .city-input {
-            width: 40rem;
-            padding: 0.81rem;
-            border-radius: 1.25rem;
-            outline: none;
-            color: white;
-            border-color: rgba(0, 0, 0, 0.5);
-            background-color: rgba(128, 128, 128, 0.5);
-            opacity: 60%;
-            font-size: 1.5rem;
+      &::placeholder {
+        color: white;
+      }
 
-            &::placeholder {
-                color: white;
-            }
-
-            @include breakpointDOWN(mobileonly) {
-                width: 18rem;
-            }
-        }
-
-        @include breakpointUP(tablet) {
-            width: calc(100% - 2rem);
-        }
-
-        button {
-            border-radius: 50%;
-            width: 3.12rem;
-            height: 3.12rem;
-            background-color: rgba(128, 128, 128, 0.5);
-            border: 0.06rem solid rgba(128, 128, 128, 0.5);
-
-            &:hover {
-                background-color: rgba(128, 128, 128, 0.8);
-            }
-
-            @include breakpointUP(tablet) {
-                position: relative;
-                right: 56px;
-                top: 4px;
-                background: none;
-                border: none;
-            }
-
-            @include breakpointUP(laptop) {
-                position: static;
-                background-color: rgba(128, 128, 128, 0.5);
-                border: 0.06rem solid rgba(128, 128, 128, 0.5);
-            }
-        }
+      @include breakpointDOWN(tablet) {
+        width: 100%;
+      }
     }
 
-    &__suggestions {
-        display: none;
+    @include breakpointDOWN(tablet) {
+      width: 100%;
+    }
+
+    button {
+      border-radius: 50%;
+      width: 3.12rem;
+      height: 3.12rem;
+      background-color: rgba(128, 128, 128, 0.5);
+      border: 0.06rem solid rgba(128, 128, 128, 0.5);
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.8);
+      }
+
+      @include breakpointDOWN(tablet) {
         position: absolute;
-        top: 20%;
-        background-color: rgb(37, 5, 5);
-        justify-content: center;
-        opacity: 100%;
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-        gap: 0px;
-        max-width: 40rem;
-        padding: 0.81rem;
-        z-index: 100;
+        right: 6px;
+        top: 4px;
+        background: none;
+        border: none;
+      }
 
-        @include breakpointUP(tablet) {
-            width: calc(100% - 4rem);
-        }
-
-        &.active {
-            display: flex;
-        }
-
-        li {
-            margin-right: 2rem;
-            justify-content: center;
-            margin-bottom: 0.25rem;
-            border-bottom: 1px solid black;
-            font-size: 1rem;
-            cursor: pointer;
-
-            &:hover {
-                background-color: rgba(120, 84, 136, 0.432);
-            }
-        }
-
-        @include breakpointDOWN(mobileonly) {
-            width: 18rem !important;
-            top: 12% !important;
-            left: 17px;
-            z-index: 1;
-            justify-content: flex-start;
-            padding: 1rem 0 1rem 2rem;
-        }
+      @include breakpointUP(laptop) {
+        position: static;
+        background-color: rgba(128, 128, 128, 0.5);
+        border: 0.06rem solid rgba(128, 128, 128, 0.5);
+      }
     }
+  }
+
+  &__suggestions {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    top: 90%;
+    background-color: rgb(37, 5, 5);
+    opacity: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 0px;
+    width: 100%;
+    padding: 0.81rem;
+    z-index: 100;
+
+    &.active {
+      display: flex;
+    }
+
+    li {
+      margin-right: 2rem;
+      justify-content: center;
+      margin-bottom: 0.25rem;
+      border-bottom: 1px solid black;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(120, 84, 136, 0.432);
+      }
+    }
+
+    @include breakpointDOWN(mobileonly) {
+      width: 100%;
+      z-index: 1;
+      justify-content: flex-start;
+      padding: 1rem 0 1rem 2rem;
+    }
+  }
 }

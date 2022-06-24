@@ -87,8 +87,24 @@ p {
   margin: 0;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .search-box {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   gap: 0;
@@ -117,14 +133,14 @@ p {
 .search-box__search .city-input::placeholder {
   color: white;
 }
-@media (max-width: 400px) {
+@media (max-width: 750px) {
   .search-box__search .city-input {
-    width: 18rem;
+    width: 100%;
   }
 }
-@media (min-width: 401px) {
+@media (max-width: 750px) {
   .search-box__search {
-    width: calc(100% - 2rem);
+    width: 100%;
   }
 }
 .search-box__search button {
@@ -137,10 +153,10 @@ p {
 .search-box__search button:hover {
   background-color: rgba(128, 128, 128, 0.8);
 }
-@media (min-width: 401px) {
+@media (max-width: 750px) {
   .search-box__search button {
-    position: relative;
-    right: 56px;
+    position: absolute;
+    right: 6px;
     top: 4px;
     background: none;
     border: none;
@@ -154,24 +170,19 @@ p {
   }
 }
 .search-box__suggestions {
-  display: none;
   position: absolute;
-  top: 20%;
-  background-color: rgb(37, 5, 5);
+  display: none;
   justify-content: center;
+  top: 90%;
+  background-color: rgb(37, 5, 5);
   opacity: 100%;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 0px;
-  max-width: 40rem;
+  width: 100%;
   padding: 0.81rem;
   z-index: 100;
-}
-@media (min-width: 401px) {
-  .search-box__suggestions {
-    width: calc(100% - 4rem);
-  }
 }
 .search-box__suggestions.active {
   display: flex;
@@ -189,9 +200,7 @@ p {
 }
 @media (max-width: 400px) {
   .search-box__suggestions {
-    width: 18rem !important;
-    top: 12% !important;
-    left: 17px;
+    width: 100%;
     z-index: 1;
     justify-content: flex-start;
     padding: 1rem 0 1rem 2rem;
@@ -214,7 +223,7 @@ p {
   font-size: 3rem;
   margin: 0 0 0.625rem 0;
 }
-@media (max-width: 400px) {
+@media (max-width: 649px) {
   .weather-card__header h1 {
     font-size: 2rem;
   }
@@ -247,7 +256,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   margin-bottom: 1.25rem;
 }
 .weather-card__main-info .curr-status {
@@ -257,12 +265,17 @@ p {
   font-size: 5rem;
   margin-bottom: 50px;
 }
+@media (max-width: 649px) {
+  .weather-card__main-info .curr-status {
+    font-size: 3rem;
+  }
+}
 .weather-card__main-info .curr-status #weather-icon {
   transform: scale(6);
 }
-@media (min-width: 401px) {
+@media (max-width: 649px) {
   .weather-card__main-info .curr-status #weather-icon {
-    transofmr: scale(3);
+    transform: scale(4);
   }
 }
 @media (max-width: 400px) {
@@ -285,11 +298,6 @@ p {
     margin-top: 2rem;
   }
 }
-@media (max-width: 400px) and (max-width: 400px) {
-  .weather-card__main-info .curr-status #temp {
-    font-size: 3rem;
-  }
-}
 @media (max-width: 400px) {
   .weather-card__main-info {
     display: block;
@@ -298,23 +306,28 @@ p {
   }
 }
 .weather-card__statistics ul {
-  margin-top: 0;
-  list-style: none;
   display: flex;
+  list-style: none;
+  margin-top: 0;
   gap: 3.125rem;
 }
 .weather-card__statistics ul li {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.2rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 649px) {
+  .weather-card__statistics ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 649px) {
   .weather-card__statistics ul {
-    gap: 0;
     justify-content: center;
-    font-size: 1.5rem;
-    margin-top: 2rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1rem;
   }
   .weather-card__statistics ul li {
     gap: 0.1rem;
@@ -323,12 +336,16 @@ p {
   }
 }
 
+.forecast {
+  margin-bottom: 3.125rem;
+}
 .forecast__daily h2, .forecast__hourly h2 {
   margin: 0;
   padding-left: 1.25rem;
 }
 .forecast__daily ul, .forecast__hourly ul {
   display: flex;
+  overflow-x: auto;
   background-color: rgba(192, 192, 192, 0.1);
   border: 1px solid black;
   border-radius: 7px;

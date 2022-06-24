@@ -1,128 +1,133 @@
 .weather-card {
-    &__header {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin-bottom: 50px;
-        gap: 0.31rem;
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 0.31rem;
 
-        @include breakpointDOWN(mobileonly) {
-            margin-bottom: 0px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0 0 0.625rem 0;
-
-            @include breakpointDOWN(mobileonly) {
-                font-size: 2rem;
-            }
-        }
-
-        .country-name-header {
-            padding-top: 0.625rem;
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        @include breakpointDOWN(mobileonly) {
-            padding: 0;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            gap: 0;
-
-            h1 {
-                margin: 0;
-            }
-
-            p.country-name-header {
-                margin: 0;
-                margin-bottom: 50px;
-                padding-top: 0px;
-                padding-left: 7rem;
-            }
-        }
+    @include breakpointDOWN(mobileonly) {
+      margin-bottom: 0px;
     }
 
-    &__main-info {
-        padding-left: 2.5rem;
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 0.625rem 0;
+
+      @include breakpointDOWN(iPad) {
+        font-size: 2rem;
+      }
+    }
+
+    .country-name-header {
+      padding-top: 0.625rem;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    @include breakpointDOWN(mobileonly) {
+      padding: 0;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+
+      h1 {
+        margin: 0;
+      }
+
+      p.country-name-header {
+        margin: 0;
+        margin-bottom: 50px;
+        padding-top: 0px;
+        padding-left: 7rem;
+      }
+    }
+  }
+
+  &__main-info {
+    padding-left: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //font-size: 2rem;
+    margin-bottom: 1.25rem;
+
+    .curr-status {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      font-size: 5rem;
+      margin-bottom: 50px;
+
+      @include breakpointDOWN(iPad) {
+        font-size: 3rem;
+      }
+
+      #weather-icon {
+        transform: scale(6);
+
+        @include breakpointDOWN(iPad) {
+          transform: scale(4);
+        }
+
+        @include breakpointDOWN(mobileonly) {
+          width: 64px;
+          height: 64px;
+          transform: scale(2);
+        }
+      }
+      @include breakpointDOWN(mobileonly) {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        gap: 40px;
+
+        #temp {
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    @include breakpointDOWN(mobileonly) {
+      display: block;
+      min-height: 10rem;
+      padding: 0;
+    }
+  }
+
+  &__statistics {
+    ul {
+      display: flex;
+      list-style: none;
+      margin-top: 0;
+      gap: 3.125rem;
+
+      li {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
-        margin-bottom: 1.25rem;
+        gap: 0.2rem;
 
-        .curr-status {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            font-size: 5rem;
-            margin-bottom: 50px;
-
-            #weather-icon {
-                transform: scale(6);
-
-                @include breakpointUP(tablet) {
-                    transofmr: scale(3);
-                }
-
-                @include breakpointDOWN(mobileonly) {
-                    width: 64px;
-                    height: 64px;
-                    transform: scale(2);
-                }
-            }
-            @include breakpointDOWN(mobileonly) {
-                display: block;
-                margin-bottom: 0;
-                margin-left: 50%;
-                transform: translateX(-50%);
-                padding: 0;
-                gap: 40px;
-
-                #temp {
-                    margin-top: 2rem;
-
-                    @include breakpointDOWN(mobileonly) {
-                        font-size: 3rem;
-                    }
-                }
-            }
+        @include breakpointDOWN(iPad) {
+          width: 50%;
         }
-        @include breakpointDOWN(mobileonly) {
-            display: block;
-            min-height: 10rem;
-            padding: 0;
+      }
+
+      @include breakpointDOWN(iPad) {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 1rem;
+
+        li {
+          gap: 0.1rem;
+          width: 40%;
+          margin: 0;
         }
+      }
     }
-
-    &__statistics {
-        ul {
-            margin-top: 0;
-            list-style: none;
-            display: flex;
-            gap: 3.125rem;
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 0.2rem;
-            }
-
-            @include breakpointDOWN(mobileonly) {
-                gap: 0;
-                justify-content: center;
-                font-size: 1.5rem;
-                margin-top: 2rem;
-                flex-wrap: wrap;
-
-                li {
-                    gap: 0.1rem;
-                    width: 40%;
-                    margin: 0;
-                }
-            }
-        }
-    }
+  }
 }
