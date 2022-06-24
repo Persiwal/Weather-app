@@ -1,31 +1,39 @@
 @mixin breakpointUP($point) {
-    @if $point==desktop {
-        @media (min-width: 1280px) {
-            @content;
-        }
-    } @else if $point==laptop {
-        @media (min-width: 751px) {
-            @content;
-        }
-    } @else if $point==tablet {
-        @media (min-width: 401px) {
-            @content;
-        }
+  @if $point==desktop {
+    @media (min-width: 1280px) {
+      @content;
     }
+  } @else if $point==laptop {
+    @media (min-width: 751px) {
+      @content;
+    }
+  } @else if $point==iPad {
+    @media (min-width: 650px) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media (min-width: 401px) {
+      @content;
+    }
+  }
 }
 
 @mixin breakpointDOWN($point) {
-    @if $point==laptop {
-        @media (max-width: 1279px) {
-            @content;
-        }
-    } @else if $point==tablet {
-        @media (max-width: 750px) {
-            @content;
-        }
-    } @else if $point==mobileonly {
-        @media (max-width: 400px) {
-            @content;
-        }
+  @if $point==laptop {
+    @media (max-width: 1279px) {
+      @content;
     }
+  } @else if $point==tablet {
+    @media (max-width: 750px) {
+      @content;
+    }
+  } @else if $point==iPad {
+    @media (max-width: 649px) {
+      @content;
+    }
+  } @else if $point==mobileonly {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
 }
