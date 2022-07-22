@@ -263,14 +263,15 @@ export const weatherIcons = {
   "light snow": "/images/snow-icon.png",
   "light intensity shower rain": "/images/rain-icon.png",
   "moderate rain": "/images/rain-icon.png",
+  "heavy intensity rain": "/images/rain-icon.png",
 };
 
 export const dayNames = {
-  0: 'Sun',
-  1: 'Mon',
-  2: 'Tue',
-  3: 'Wed',
-  4: 'Thu',
-  5: 'Fri',
-  6: 'Sat',
-}
+  0: "Sun",
+  1: "Mon",
+  2: "Tue",
+  3: "Wed",
+  4: "Thu",
+  5: "Fri",
+  6: "Sat",
+};
