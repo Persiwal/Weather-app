@@ -1,86 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&family=Outfit:wght@300;400;600;700&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,400&family=VT323&display=swap");
 
 * {
-    box-sizing: border-box;
-    padding: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 body {
-    background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg"); // display this bg if unsplash-search have error
-    background-size: 120rem 67.5rem;
-    display: flex;
-    justify-content: center;
-    min-height: 75vh;
-    align-items: center;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    padding: 0;
-    margin: 0;
+  background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg"); // display this bg if unsplash-search have error
+  background-repeat: no-repeat;
+  background-size: 120rem 67.5rem;
+  display: flex;
+  justify-content: center;
+  min-height: 75vh;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
 
-    @include breakpointDOWN(mobileonly) {
-        overflow-x: hidden;
-    }
+  @include breakpointDOWN(mobileonly) {
+    overflow-x: hidden;
+  }
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    @include breakpointUP(laptop) {
-        max-width: 756px;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  @include breakpointUP(laptop) {
+    max-width: 756px;
+  }
 
-    @include breakpointDOWN(mobileonly) {
-        width: 100%;
-        min-height: 100vh;
-    }
+  @include breakpointDOWN(mobileonly) {
+    width: 100%;
+    min-height: 100vh;
+  }
 
-    @include breakpointUP(tablet) {
-        padding: 20px 16px;
-        width: calc(100% - 40px);
-    }
+  @include breakpointUP(tablet) {
+    padding: 20px 16px;
+    width: calc(100% - 40px);
+  }
 }
 
 .card {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    box-shadow: 12.8px 12.8px 12.8px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 12.8px 12.8px 12.8px rgba(0, 0, 0, 0.6);
 
-    @include breakpointUP(laptop) {
-        padding: 20px 20px 20px 40px;
-    }
+  @include breakpointUP(laptop) {
+    padding: 20px 20px 20px 40px;
+  }
 
-    @include breakpointDOWN(mobileonly) {
-        width: 100%;
-        padding: 24px 8px 8px 8px;
-        border-radius: 0;
-    }
+  @include breakpointDOWN(mobileonly) {
+    width: 100%;
+    padding: 24px 8px 8px 8px;
+    border-radius: 0;
+  }
 
-    @include breakpointUP(tablet) {
-        padding: 20px 16px;
-    }
+  @include breakpointUP(tablet) {
+    padding: 20px 16px;
+  }
 }
 
 hr {
-    margin-top: 20px;
-    width: 100%;
-    border: 0;
-    height: 0.0625rem;
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0)
-    );
+  margin-top: 20px;
+  width: 100%;
+  border: 0;
+  height: 0.0625rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
