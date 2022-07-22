@@ -248,22 +248,22 @@ export const countries = {
 };
 
 export const weatherIcons = {
-  "clear sky": "/images/clear-sky-icon.png",
-  "broken clouds": "/images/broken-clouds-icon.png",
-  "overcast clouds": "/images/overcast-clouds-icon.png",
-  "few clouds": "/images/few-clouds-icon.png",
-  "scattered clouds": "/images/broken-clouds-icon.png",
-  "shower rain": "/images/rain-icon.png",
-  "light rain": "/images/rain-icon.png",
-  rain: "/images/rain-icon.png",
-  thunderstorm: "/images/thunderstorm-icon.png",
-  snow: "/images/snow-icon.png",
-  fog: "/images/fog-icon.png",
-  mist: "/images/fog-icon.png",
-  "light snow": "/images/snow-icon.png",
-  "light intensity shower rain": "/images/rain-icon.png",
-  "moderate rain": "/images/rain-icon.png",
-  "heavy intensity rain": "/images/rain-icon.png",
+  "clear sky": "src/images/clear-sky-icon.png",
+  "broken clouds": "src/images/broken-clouds-icon.png",
+  "overcast clouds": "src/images/overcast-clouds-icon.png",
+  "few clouds": "src/images/few-clouds-icon.png",
+  "scattered clouds": "src/images/broken-clouds-icon.png",
+  "shower rain": "src/images/rain-icon.png",
+  "light rain": "src/images/rain-icon.png",
+  rain: "src/images/rain-icon.png",
+  thunderstorm: "src/images/thunderstorm-icon.png",
+  snow: "src/images/snow-icon.png",
+  fog: "src/images/fog-icon.png",
+  mist: "src/images/fog-icon.png",
+  "light snow": "src/images/snow-icon.png",
+  "light intensity shower rain": "src/images/rain-icon.png",
+  "moderate rain": "src/images/rain-icon.png",
+  "heavy intensity rain": "src/images/rain-icon.png",
 };
 
 export const dayNames = {
