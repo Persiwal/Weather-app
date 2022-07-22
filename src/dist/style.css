@@ -6,7 +6,8 @@
 
 body {
   background-image: url("https://www.teahub.io/photos/full/122-1227023_tokyo.jpg");
-  background-size: 120rem 67.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   min-height: 75vh;
