@@ -114,7 +114,7 @@ export const weather = {
   displayHourlyWeather: (data) => {
     let hours = [];
     hourlyForecastList.innerHTML = "";
-    const currentTime = new Date();
+    const currentTime = new Date().getHours();
 
     for (let i = 1; i < data.hourly.length; i++) {
       let timestamp = data.hourly[i].dt;
@@ -123,9 +123,11 @@ export const weather = {
       let hourExist = hours.some((item) => item.time === formatedHour);
 
       if (
-        formatedHour > currentTime.getHours() &&
-        formatedHour < currentTime.getHours() + 8 &&
-        !hourExist
+        (formatedHour > currentTime &&
+          formatedHour < currentTime + 8 &&
+          !hourExist) ||
+        (currentTime - formatedHour >= 16 &&
+          hours.filter((hour) => hour.time === formatedHour).length === 0)
       ) {
         let weather = {
           temp: data.hourly[i].temp,
